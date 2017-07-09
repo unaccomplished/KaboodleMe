@@ -1,5 +1,5 @@
 (function() {
-    function config($locationProvider, $stateProvider, $urlRouterProvider) {
+    function config($locationProvider, $stateProvider, $urlRouterProvider, $authProvider) {
         // $locationProvider
         //     .html5Mode({
         //         enabled: true,
@@ -16,9 +16,14 @@
 
 
         $urlRouterProvider.otherwise('/');
+
+        $authProvider
+            .configure({
+                apiUrl: '/api'
+            });
     }
 
     angular
-        .module('kaboodleme', ['ui.router'])
+        .module('kaboodleme', ['ui.router', 'ng-token-auth'])
         .config(config);
 })();

@@ -1,0 +1,20 @@
+{
+  "name": "public",
+  "homepage": "https://github.com/unaccomplished/KaboodleMe",
+  "authors": [
+    "Jocelyn Hsu <hsu.joce@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ng-token-auth": "^0.0.30"
+  }
+}
