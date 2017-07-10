@@ -14,41 +14,44 @@
 
     $ctrl.$onInit = onInit;
     $ctrl.submit = submit;
+    $ctrl.handleFBBtnClick = handleFBBtnClick;
+    $ctrl.handleGBtnClick = handleGBtnClick;
+    $ctrl.handleTBtnClick = handleTBtnClick;
 
     function onInit() {
       $ctrl.registrationForm = {};
 
     }
 
-    // function handleBtnClick() {
-    //   $auth.authenticate('facebook')
-    //     .then(function(resp) {
-    //       // handle success
-    //     })
-    //     .catch(function(resp) {
-    //       // handle errors
-    //     });
-    // };
-    //
-    // function handleBtnClick() {
-    //   $auth.authenticate('google')
-    //     .then(function(resp) {
-    //       // handle success
-    //     })
-    //     .catch(function(resp) {
-    //       // handle errors
-    //     });
-    // };
-    //
-    // function handleBtnClick() {
-    //   $auth.authenticate('twitter')
-    //     .then(function(resp) {
-    //       // handle success
-    //     })
-    //     .catch(function(resp) {
-    //       // handle errors
-    //     });
-    // };
+    function handleFBBtnClick() {
+      $auth.authenticate('facebook')
+        .then(function(resp) {
+          // handle success
+        })
+        .catch(function(resp) {
+          // handle errors
+        });
+    };
+
+    function handleGBtnClick() {
+      $auth.authenticate('google')
+        .then(function(resp) {
+          // handle success
+        })
+        .catch(function(resp) {
+          // handle errors
+        });
+    };
+
+    function handleTBtnClick() {
+      $auth.authenticate('twitter')
+        .then(function(resp) {
+          // handle success
+        })
+        .catch(function(resp) {
+          // handle errors
+        });
+    };
 
     function submit() {
       $auth.submitRegistration($ctrl.registrationForm)

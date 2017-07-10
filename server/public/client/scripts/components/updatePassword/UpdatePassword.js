@@ -1,6 +1,6 @@
 (function() {
   var userLogin = {
-    templateUrl: '../scripts/components/updatePassword/update-password.html'
+    templateUrl: 'client/scripts/components/updatePassword/update-password.html'
       bindings: {
       resolve: '<',
       close: '&',
@@ -9,8 +9,12 @@
     controller: updatePasswordCtrl
   }
 
-  function updatePasswordCtrl($scope, $auth) {
-    function $scope.handleUpdatePasswordBtnClick() {
+  function updatePasswordCtrl($auth) {
+    var $ctrl = this;
+
+    $ctrl.handleUpdatePasswordBtnClick = handleUpdatePasswordBtnClick;
+
+    function handleUpdatePasswordBtnClick() {
       $auth.updatePassword($scope.updatePasswordForm)
         .then(function(resp) {
           // handle success response

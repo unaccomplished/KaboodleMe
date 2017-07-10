@@ -1,6 +1,6 @@
 (function() {
   var userLogin = {
-    templateUrl: '../scripts/components/requestPasswordReset/request-password-reset.html',
+    templateUrl: 'client/scripts/components/requestPasswordReset/request-password-reset.html',
     bindings: {
       resolve: '<',
       close: '&',
@@ -9,8 +9,12 @@
     controller: requestPasswordResetCtrl
   }
 
-  function requestPasswordResetCtrl($scope, $auth) {
-    function $scope.handlePwdResetBtnClick() {
+  function requestPasswordResetCtrl($auth) {
+    var $ctrl = this;
+
+    $ctrl.handlePwdResetBtnClick = handlePwdResetBtnClick;
+
+    function handlePwdResetBtnClick() {
       $auth.requestPasswordReset($scope.pwdResetForm)
         .then(function(resp) {
           // handle success response

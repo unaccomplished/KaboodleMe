@@ -1,6 +1,6 @@
 (function() {
   var userLogin = {
-    templateUrl: '../scripts/components/userSignOut/user-sign-out.html',
+    templateUrl: 'client/scripts/components/userSignOut/user-sign-out.html',
     bindings: {
       resolve: '<',
       close: '&',
@@ -9,8 +9,12 @@
     controller: userSignOutCtrl
   }
 
-  function userSignOutCtrl($scope, $auth) {
-    function $scope.handleSignOutBtnClick() {
+  function userSignOutCtrl($auth) {
+    var $ctrl = this;
+
+    $ctrl.handleSignOutBtnClick = handleSignOutBtnClick;
+
+    function handleSignOutBtnClick() {
       $auth.signOut()
         .then(function(resp) {
           // handle success response

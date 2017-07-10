@@ -1,6 +1,6 @@
 (function() {
   var userLogin = {
-    templateUrl: '../scripts/components/userLogin/user-login.html',
+    templateUrl: 'client/scripts/components/userLogin/user-login.html',
     bindings: {
       resolve: '<',
       close: '&',
@@ -9,8 +9,15 @@
     controller: userLoginCtrl
   }
 
-  function userLoginCtrl($scope, $auth) {
-    function $scope.handleBtnClick() {
+  function userLoginCtrl($auth) {
+    var $ctrl = this;
+
+    $ctrl.handleLoginBtnClick = handleLoginBtnClick;
+    $ctrl.handleFBBtnClick = handleFBBtnClick;
+    $ctrl.handleGBtnClick = handleGBtnClick;
+    $ctrl.handleTBtnClick = handleTBtnClick;
+
+    function handleFBBtnClick() {
       $auth.authenticate('facebook')
         .then(function(resp) {
           // handle success
@@ -20,7 +27,7 @@
         });
     };
 
-    function $scope.handleBtnClick() {
+    function handleGBtnClick() {
       $auth.authenticate('google')
         .then(function(resp) {
           // handle success
@@ -30,7 +37,7 @@
         });
     };
 
-    function $scope.handleBtnClick() {
+    function handleTBtnClick() {
       $auth.authenticate('twitter')
         .then(function(resp) {
           // handle success
@@ -40,7 +47,7 @@
         });
     };
 
-    function $scope.handleLoginBtnClick() {
+    function handleLoginBtnClick() {
       $auth.submitLogin($scope.loginForm)
         .then(function(resp) {
           // handle success response
