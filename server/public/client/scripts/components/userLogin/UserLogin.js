@@ -16,6 +16,7 @@
     $ctrl.handleFBBtnClick = handleFBBtnClick;
     $ctrl.handleGBtnClick = handleGBtnClick;
     $ctrl.handleTBtnClick = handleTBtnClick;
+    $ctrl.openUserLogin = openUserLogin;
 
     function handleFBBtnClick() {
       $auth.authenticate('facebook')
@@ -56,6 +57,10 @@
           // handle error response
         });
     };
+
+    function openUserLogin() {
+      $ctrl.userLogin;
+    }
   }
 
   angular

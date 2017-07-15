@@ -1,5 +1,5 @@
 (function() {
-  var userLogin = {
+  var requestPasswordReset = {
     templateUrl: 'client/scripts/components/requestPasswordReset/request-password-reset.html',
     bindings: {
       resolve: '<',
@@ -27,5 +27,5 @@
 
   angular
       .module('kaboodleme')
-      .component('requirePasswordReset', requirePasswordReset);
+      .component('requestPasswordReset', requestPasswordReset);
 })();

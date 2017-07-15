@@ -1,5 +1,5 @@
 (function() {
-  var userLogin = {
+  var userSignOut = {
     templateUrl: 'client/scripts/components/userSignOut/user-sign-out.html',
     bindings: {
       resolve: '<',
@@ -27,5 +27,5 @@
 
   angular
       .module('kaboodleme')
-      .component('userSignOut', userSignOut);
+      .component('userSignOut', userSignOut)
 })();

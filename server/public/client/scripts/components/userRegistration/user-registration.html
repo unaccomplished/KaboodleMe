@@ -1,3 +1,4 @@
+<h2>Registration Page</h2>
 <form ng-submit="$ctrl.submit()" role="form">
   <div class="form-group">
     <label>email</label>
@@ -14,18 +15,23 @@
     <input type="password" name="password_confirmation" ng-model="$ctrl.registrationForm.password_confirmation" required="required" class="form-control"/>
   </div>
 
+  <button type="submit" class="btn btn-primary btn-lg">Register</button>
+
   <div class="form-group">
     <label>or</label>
     <button ng-click="authenticate('facebook')">
-      Sign in with Facebook
+      Register with Facebook
     </button>
     <button ng-click="authenticate('google')">
-      Sign in with Google
+      Register with Google
     </button>
     <button ng-click="authenticate('twitter')">
-      Sign in with Twitter
+      Register with Twitter
     </button>
   </div>
-
-  <button type="submit" class="btn btn-primary btn-lg">Register</button>
 </form>
+
+<div class="login-account">
+  <label>Have an account?</label>
+  <button class="login-button" type="button" ng-click="$ctrl.openUserLogin()">Login</button>
+</div>
