@@ -12,10 +12,15 @@
   function requestPasswordResetCtrl($auth) {
     var $ctrl = this;
 
+    $ctrl.$onInit = onInit;
     $ctrl.handlePwdResetBtnClick = handlePwdResetBtnClick;
 
+    function onInit() {
+      $ctrl.pwdResetForm;
+    }
+
     function handlePwdResetBtnClick() {
-      $auth.requestPasswordReset($scope.pwdResetForm)
+      $auth.requestPasswordReset($ctrl.pwdResetForm)
         .then(function(resp) {
           // handle success response
         })

@@ -12,11 +12,16 @@
   function userLoginCtrl($auth) {
     var $ctrl = this;
 
+    $ctrl.$onInit = onInit;
     $ctrl.handleLoginBtnClick = handleLoginBtnClick;
     $ctrl.handleFBBtnClick = handleFBBtnClick;
     $ctrl.handleGBtnClick = handleGBtnClick;
     $ctrl.handleTBtnClick = handleTBtnClick;
     $ctrl.openUserLogin = openUserLogin;
+
+    function onInit() {
+      $ctrl.loginForm = {};
+    }
 
     function handleFBBtnClick() {
       $auth.authenticate('facebook')
@@ -49,7 +54,7 @@
     };
 
     function handleLoginBtnClick() {
-      $auth.submitLogin($scope.loginForm)
+      $auth.submitLogin($ctrl.loginForm)
         .then(function(resp) {
           // handle success response
         })
