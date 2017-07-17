@@ -9,15 +9,15 @@
     controller: userLoginCtrl
   }
 
-  function userLoginCtrl($auth) {
+  function userLoginCtrl($auth, $state) {
     var $ctrl = this;
 
     $ctrl.$onInit = onInit;
-    $ctrl.handleLoginBtnClick = handleLoginBtnClick;
     $ctrl.handleFBBtnClick = handleFBBtnClick;
     $ctrl.handleGBtnClick = handleGBtnClick;
     $ctrl.handleTBtnClick = handleTBtnClick;
     $ctrl.openUserLogin = openUserLogin;
+    $ctrl.login = login;
 
     function onInit() {
       $ctrl.loginForm = {};
@@ -53,10 +53,10 @@
         });
     };
 
-    function handleLoginBtnClick() {
+    function login() {
       $auth.submitLogin($ctrl.loginForm)
         .then(function(resp) {
-          // handle success response
+          $state.go('dashboard');
         })
         .catch(function(resp) {
           // handle error response

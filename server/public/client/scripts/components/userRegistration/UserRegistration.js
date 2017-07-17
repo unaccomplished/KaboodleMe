@@ -9,44 +9,20 @@
     controller: userRegistrationCtrl
   }
 
-  function userRegistrationCtrl($auth) {
+  function userRegistrationCtrl($auth, $state) {
     var $ctrl = this;
 
     $ctrl.$onInit = onInit;
     $ctrl.submit = submit;
-    $ctrl.handleFBBtnClick = handleFBBtnClick;
-    $ctrl.handleGBtnClick = handleGBtnClick;
-    $ctrl.handleTBtnClick = handleTBtnClick;
+    $ctrl.registerSocial = registerSocial;
 
     function onInit() {
       $ctrl.registrationForm = {};
-
     }
 
-    function handleFBBtnClick() {
-      $auth.authenticate('facebook')
+    function registerSocial(type) {
+      $auth.authenticate(type)
         .then(function(resp) {
-          // handle success
-        })
-        .catch(function(resp) {
-          // handle errors
-        });
-    };
-
-    function handleGBtnClick() {
-      $auth.authenticate('google')
-        .then(function(resp) {
-          // handle success
-        })
-        .catch(function(resp) {
-          // handle errors
-        });
-    };
-
-    function handleTBtnClick() {
-      $auth.authenticate('twitter')
-        .then(function(resp) {
-          // handle success
         })
         .catch(function(resp) {
           // handle errors
@@ -56,7 +32,8 @@
     function submit() {
       $auth.submitRegistration($ctrl.registrationForm)
         .then(function(resp) {
-          // handle success response
+          console.log('hello')
+          $state.go('dashboard');
         })
         .catch(function(resp) {
           // handle error response

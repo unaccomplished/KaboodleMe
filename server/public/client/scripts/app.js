@@ -12,6 +12,19 @@
                 controller: 'HomeCtrl',
                 controllerAs: '$ctrl',
                 templateUrl: 'client/scripts/views/home/home.html'
+            })
+            .state('dashboard', {
+                url: '/dashboard',
+                component: 'dashboard',
+                resolve: {
+                  auth: function($auth) {
+                    return $auth.validateUser();
+                  }
+                }
+            })
+            .state('login', {
+                url: '/login',
+                component: 'userLogin'
             });
 
 
