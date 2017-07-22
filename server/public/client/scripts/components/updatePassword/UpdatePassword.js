@@ -9,23 +9,23 @@
     controller: updatePasswordCtrl
   }
 
-  function updatePasswordCtrl($auth) {
+  function updatePasswordCtrl($auth, $state) {
     var $ctrl = this;
 
     $ctrl.$onInit = onInit;
-    $ctrl.handleUpdatePasswordBtnClick = handleUpdatePasswordBtnClick;
+    $ctrl.updatePasswordButton = updatePasswordButton;
 
     function onInit() {
       $ctrl.updatePasswordForm = {};
     }
 
-    function handleUpdatePasswordBtnClick() {
+    function updatePasswordButton() {
       $auth.updatePassword($ctrl.updatePasswordForm)
         .then(function(resp) {
-          // handle success response
+          $state.go('login');
         })
         .catch(function(resp) {
-          // handle error response
+          console.log('update password error')
         });
     };
   }

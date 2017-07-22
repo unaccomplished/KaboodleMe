@@ -9,18 +9,18 @@
     controller: userSignOutCtrl
   }
 
-  function userSignOutCtrl($auth) {
+  function userSignOutCtrl($auth, $state) {
     var $ctrl = this;
 
-    $ctrl.handleSignOutBtnClick = handleSignOutBtnClick;
+    $ctrl.signOutButton = signOutButton;
 
-    function handleSignOutBtnClick() {
+    function signOutButton() {
       $auth.signOut()
         .then(function(resp) {
-          // handle success response
+          $state.go('home');
         })
         .catch(function(resp) {
-          // handle error response
+          console.log('sign out error');
         });
     };
   }

@@ -13,43 +13,21 @@
     var $ctrl = this;
 
     $ctrl.$onInit = onInit;
-    $ctrl.handleFBBtnClick = handleFBBtnClick;
-    $ctrl.handleGBtnClick = handleGBtnClick;
-    $ctrl.handleTBtnClick = handleTBtnClick;
     $ctrl.openUserLogin = openUserLogin;
     $ctrl.login = login;
+    $ctrl.loginSocial = loginSocial;
 
     function onInit() {
       $ctrl.loginForm = {};
     }
 
-    function handleFBBtnClick() {
-      $auth.authenticate('facebook')
+    function loginSocial(type) {
+      $auth.authenticate(type)
         .then(function(resp) {
-          // handle success
+          $state.go('dashboard');
         })
         .catch(function(resp) {
-          // handle errors
-        });
-    };
-
-    function handleGBtnClick() {
-      $auth.authenticate('google')
-        .then(function(resp) {
-          // handle success
-        })
-        .catch(function(resp) {
-          // handle errors
-        });
-    };
-
-    function handleTBtnClick() {
-      $auth.authenticate('twitter')
-        .then(function(resp) {
-          // handle success
-        })
-        .catch(function(resp) {
-          // handle errors
+          console.log('social login error');
         });
     };
 
@@ -59,7 +37,7 @@
           $state.go('dashboard');
         })
         .catch(function(resp) {
-          // handle error response
+          console.log('email login error');
         });
     };
 

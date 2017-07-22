@@ -15,7 +15,7 @@
     <input type="password" name="password_confirmation" ng-model="$ctrl.registrationForm.password_confirmation" required="required" class="form-control"/>
   </div>
 
-  <button type="submit" class="btn btn-primary btn-lg" ng-click="$ctrl.submit()">Register</button>
+  <button type="submit" class="btn btn-primary btn-lg" ng-click="$ctrl.register()">Register</button>
 
   <div class="form-group">
     <label>or</label>
@@ -33,5 +33,5 @@
 
 <div class="login-account">
   <label>Have an account?</label>
-  <button class="login-button" type="button" ng-click="$ctrl.openUserLogin()">Login</button>
+  <button class="login-button" type="button" ui-sref="login">Login</button>
 </div>

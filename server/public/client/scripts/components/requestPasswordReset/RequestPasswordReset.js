@@ -9,23 +9,23 @@
     controller: requestPasswordResetCtrl
   }
 
-  function requestPasswordResetCtrl($auth) {
+  function requestPasswordResetCtrl($auth, $state) {
     var $ctrl = this;
 
     $ctrl.$onInit = onInit;
-    $ctrl.handlePwdResetBtnClick = handlePwdResetBtnClick;
+    $ctrl.passwordResetButton = passwordResetButton;
 
     function onInit() {
-      $ctrl.pwdResetForm;
+      $ctrl.pwdResetForm = {};
     }
 
-    function handlePwdResetBtnClick() {
+    function passwordResetButton() {
       $auth.requestPasswordReset($ctrl.pwdResetForm)
         .then(function(resp) {
-          // handle success response
+          $state.go('update-password');
         })
         .catch(function(resp) {
-          // handle error response
+          console.log('request password reset error');
         });
     };
   }
