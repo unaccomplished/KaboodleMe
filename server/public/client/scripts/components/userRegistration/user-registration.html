@@ -13,6 +13,7 @@
   <div class="form-group">
     <label>password confirmation</label>
     <input type="password" name="password_confirmation" ng-model="$ctrl.registrationForm.password_confirmation" required="required" class="form-control"/>
+    <br><span class="error-message">{{ $ctrl.errorMessage }}</span>
   </div>
 
   <button type="submit" class="btn btn-primary btn-lg" ng-click="$ctrl.register()">Register</button>

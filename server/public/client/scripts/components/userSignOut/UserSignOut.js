@@ -20,7 +20,7 @@
           $state.go('home');
         })
         .catch(function(resp) {
-          console.log('sign out error');
+          $ctrl.errorMessage = "There is a sign out error. Please try again.";
         });
     };
   }

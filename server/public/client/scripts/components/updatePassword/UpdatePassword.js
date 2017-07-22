@@ -25,7 +25,7 @@
           $state.go('login');
         })
         .catch(function(resp) {
-          console.log('update password error')
+          $ctrl.errorMessage = "There is an update password error. Please try again.";
         });
     };
   }

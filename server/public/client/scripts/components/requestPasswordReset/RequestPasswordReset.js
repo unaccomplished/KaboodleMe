@@ -25,7 +25,7 @@
           $state.go('update-password');
         })
         .catch(function(resp) {
-          console.log('request password reset error');
+          $ctrl.errorMessage = "There is a request password reset error. Please try again.";
         });
     };
   }

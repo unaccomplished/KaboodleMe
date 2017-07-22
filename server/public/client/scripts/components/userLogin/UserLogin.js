@@ -37,7 +37,7 @@
           $state.go('dashboard');
         })
         .catch(function(resp) {
-          console.log('email login error');
+          $ctrl.errorMessage = "There is an email login error. Please try again.";
         });
     };
 

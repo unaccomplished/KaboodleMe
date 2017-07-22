@@ -8,6 +8,7 @@
   <div class="form-group">
     <label>password</label>
     <input type="password" name="password" ng-model="$ctrl.loginForm.password" required="required" class="form-control"/>
+    <br><span class="error-message">{{ $ctrl.errorMessage }}</span>
   </div>
 
   <button type="submit" class="btn btn-primary btn-lg" ng-click="$ctrl.login()">Sign in</button>

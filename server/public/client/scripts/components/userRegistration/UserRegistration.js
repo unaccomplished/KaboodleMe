@@ -36,7 +36,7 @@
           $state.go('dashboard');
         })
         .catch(function(resp) {
-          console.log('email registration error');
+          $ctrl.errorMessage = "There is an email registration error. Please try again.";
         });
     };
   }
