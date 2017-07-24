@@ -2,21 +2,35 @@
 <form role="form">
   <div class="form-group">
     <label>email</label>
-    <input type="email" name="email" ng-model="$ctrl.registrationForm.email" required="required" class="form-control"/>
+    <input type="email"
+           name="email"
+           ng-model="$ctrl.registrationForm.email"
+           required
+           class="form-control"/>
   </div>
 
   <div class="form-group">
     <label>password</label>
-    <input type="password" name="password" ng-model="$ctrl.registrationForm.password" required="required" class="form-control"/>
+    <input type="password"
+           name="password"
+           ng-model="$ctrl.registrationForm.password"
+           required
+           class="form-control"/>
   </div>
 
   <div class="form-group">
     <label>password confirmation</label>
-    <input type="password" name="password_confirmation" ng-model="$ctrl.registrationForm.password_confirmation" required="required" class="form-control"/>
+    <input type="password"
+           name="password_confirmation"
+           ng-model="$ctrl.registrationForm.password_confirmation"
+           required
+           class="form-control"/>
     <br><span class="error-message">{{ $ctrl.errorMessage }}</span>
   </div>
 
-  <button type="submit" class="btn btn-primary btn-lg" ng-click="$ctrl.register()">Register</button>
+  <button type="submit"
+          class="btn btn-primary btn-lg"
+          ng-click="$ctrl.register()">Register</button>
 
   <div class="form-group">
     <label>or</label>
@@ -34,5 +48,7 @@
 
 <div class="login-account">
   <label>Have an account?</label>
-  <button class="login-button" type="button" ui-sref="login">Login</button>
+  <button class="login-button"
+          type="button"
+          ui-sref="login">Login</button>
 </div>
