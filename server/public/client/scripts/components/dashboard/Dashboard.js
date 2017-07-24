@@ -9,9 +9,14 @@
     controller: dashboardCtrl
   }
 
-  function dashboardCtrl() {
+  function dashboardCtrl(user) {
     var $ctrl = this;
 
+    $ctrl.$onInit = onInit;
+
+    function onInit() {
+      $ctrl.currentUser = user;
+    }
   }
 
   angular

@@ -1,5 +1,5 @@
 (function() {
-    function config($locationProvider, $stateProvider, $urlRouterProvider, $authProvider) {
+    function config($locationProvider, $stateProvider, $urlRouterProvider, $authProvider, userProvider) {
         // $locationProvider
         //     .html5Mode({
         //         enabled: true,
@@ -44,7 +44,16 @@
 
         $authProvider
             .configure({
-                apiUrl: '/api'
+                apiUrl: '/api',
+                handleLoginResponse: function(response) {
+                  userProvider.$set(response.data);
+                },
+                handleAccountUpdateResponse: function(response) {
+                  userProvider.$set(response.data);
+                },
+                handleTokenValidationResponse: function(response) {
+                  userProvider.$set(response.data);
+                }
             });
     }
 
