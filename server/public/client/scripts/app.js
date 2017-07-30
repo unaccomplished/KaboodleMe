@@ -45,6 +45,11 @@
         $authProvider
             .configure({
                 apiUrl: '/api',
+                authProviderPaths: {
+                  facebook: '/auth/facebook',
+                  google: '/auth/google_oauth2',
+                  twitter: '/auth/twitter'
+                },
                 handleLoginResponse: function(response) {
                   userProvider.$set(response.data);
                 },
