@@ -50,6 +50,7 @@
                   google: '/auth/google_oauth2',
                   twitter: '/auth/twitter'
                 },
+                storage: 'localStorage',
                 handleLoginResponse: function(response) {
                   userProvider.$set(response.data);
                 },
