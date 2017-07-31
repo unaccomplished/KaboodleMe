@@ -31,13 +31,17 @@
         });
     };
 
+    var errorMessages = {
+      unauthorized: "Invalid Credentials. Please Try Again."
+    };
+
     function login() {
       $auth.submitLogin($ctrl.loginForm)
         .then(function(resp) {
           $state.go('dashboard');
         })
         .catch(function(resp) {
-          $ctrl.errorMessage = "There is an email login error. Please try again.";
+          $ctrl.errorMessage = errorMessages[resp.reason];
         });
     };
 
