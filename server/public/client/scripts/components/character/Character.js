@@ -9,7 +9,7 @@
     controller: characterCtrl
   }
 
-  function characterCtrl(user) {
+  function characterCtrl() {
     var $ctrl = this;
 
   }

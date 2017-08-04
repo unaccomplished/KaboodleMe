@@ -37,6 +37,14 @@
             .state('update-password', {
                 url: '/updatepassword',
                 component: 'updatePassword'
+            })
+            .state('store', {
+                url: '/store',
+                component: 'store'
+            })
+            .state('career', {
+                url: '/career',
+                component: 'career'
             });
 
 
