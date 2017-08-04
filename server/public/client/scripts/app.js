@@ -64,6 +64,6 @@
     }
 
     angular
-        .module('kaboodleme', ['ui.router', 'ng-token-auth', 'ui.bootstrap'])
+        .module('kaboodleme', ['ui.router', 'ng-token-auth'])
         .config(config);
 })();
