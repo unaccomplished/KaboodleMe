@@ -45,6 +45,26 @@
             .state('career', {
                 url: '/career',
                 component: 'career'
+            })
+            .state('name', {
+                url: '/name',
+                component: 'name'
+            })
+            .state('save', {
+                url: '/save',
+                component: 'save'
+            })
+            .state('menu', {
+                url: '/menu',
+                component: 'menu'
+            })
+            .state('items', {
+                url: '/items',
+                component: 'items'
+            })
+            .state('settings', {
+                url: '/settings',
+                component: 'settings'
             });
 
 
