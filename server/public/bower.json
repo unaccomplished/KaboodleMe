@@ -15,6 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "ng-token-auth": "^0.0.30"
+    "ng-token-auth": "^0.0.30",
+    "lodash": "^4.17.4"
   }
 }

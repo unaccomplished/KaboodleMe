@@ -1,15 +1,35 @@
-<h2>Character</h2>
+<div class="charcter">
+  <h2>Character</h2>
+  <div class="options-menu">
+    <button ng-repeat="(category, optionsList) in $ctrl.allOptions"
+            ng-click="$ctrl.showOption(category)">
+            {{ category }}
+    </button>
+  </div>
 
-<button class="character-button"
-        type="button">Gender</button>
-  <select>
-    <option>Male</option>
-    <option>Female</option>
-    <option>Royalty</option>
-  </select>
+  <div class="options-submenu">
+    <ul>
+      <li ng-repeat="option in $ctrl.visibleOptions">
+        {{option.name}}
+      </li>
+    </ul>
+  </div>
+</div>
 
-<br>
-<button class="character-button"
+
+
+<!-- <section>
+  <button class="character-button"
+          type="button">Gender</button>
+    <select>
+      <option>Male</option>
+      <option>Female</option>
+      <option>Royalty</option>
+    </select>
+</section>
+
+<section>
+  <button class="character-button"
         type="button">Species</button>
   <select>
     <option>Siamese</option>
@@ -28,9 +48,10 @@
     <option>Exotic</option>
     <option>Himalayan</option>
   </select>
+</section>
 
-<br>
-<button class="character-button"
+<section>
+  <button class="character-button"
         type="button">Eye Color</button>
   <select>
     <option>Yellow</option>
@@ -40,9 +61,10 @@
     <option>Brown</option>
     <option>Orange</option>
   </select>
+</section>
 
-<br>
-<button class="character-button"
+<section>
+  <button class="character-button"
         type="button">Eye Type</button>
   <select>
     <option>Normal/Smart</option>
@@ -50,9 +72,9 @@
     <option>Crosseyed</option>
     <option>Evil/Slitted</option>
   </select>
-
-<br>
-<button class="character-button"
+</section>
+<section>
+  <button class="character-button"
         type="button">Nose Color</button>
   <select>
     <option>Grey</option>
@@ -61,9 +83,9 @@
     <option>Copper</option>
     <option>Black</option>
   </select>
-
-<br>
-<button class="character-button"
+</section>
+<section>
+  <button class="character-button"
         type="button">Kissiepie (Mouth/Nose)</button>
   <select>
     <option>Rest</option>
@@ -75,9 +97,9 @@
     <option>O-Face</option>
     <option>Jowls</option>
   </select>
-
-<br>
-<button class="character-button"
+</section>
+<section>
+  <button class="character-button"
         type="button">Body Type</button>
   <select>
     <option>Biskit</option>
@@ -87,9 +109,9 @@
     <option>Roundy</option>
     <option>Bigboi</option>
   </select>
-
-<br>
-<button class="character-button"
+</section>
+<section>
+  <button class="character-button"
         type="button">Outfits</button>
   <select>
     <option>Cowboy</option>
@@ -103,9 +125,9 @@
     <option>Pirate</option>
     <option>Ninja</option>
   </select>
-
-<br>
-<button class="character-button"
+</section>
+<section>
+  <button class="character-button"
         type="button">Items</button>
   <select>
     <option>Briefcase</option>
@@ -117,9 +139,9 @@
     <option>Sign</option>
   </select>
 
-<br>
-<h2>Elite Items</h2>
-<button class="character-button"
+</section>
+<h2>Elite Items</h2><section>
+  <button class="character-button"
         type="button">Elite Items 1</button>
   <select>
     <option>Briefcase</option>
@@ -130,9 +152,22 @@
     <option>Ball</option>
     <option>Sign</option>
   </select>
-
-<br>
-<button class="character-button"
+</section>
+<section>
+  <button class="character-button"
+        type="button">Elite Items 2</button>
+  <select>
+    <option>Briefcase</option>
+    <option>ID</option>
+    <option>Ice Cream Cone</option>
+    <option>Slingshot</option>
+    <option>Pencil</option>
+    <option>Ball</option>
+    <option>Sign</option>
+  </select>
+</section>
+<section>
+  <button class="character-button"
         type="button">Elite Items 2</button>
   <select>
     <option>Briefcase</option>
@@ -144,22 +179,10 @@
     <option>Sign</option>
   </select>
 
-<br>
-<button class="character-button"
-        type="button">Elite Items 2</button>
-  <select>
-    <option>Briefcase</option>
-    <option>ID</option>
-    <option>Ice Cream Cone</option>
-    <option>Slingshot</option>
-    <option>Pencil</option>
-    <option>Ball</option>
-    <option>Sign</option>
-  </select>
-
-<h2>Nav Buttons</h2>
+</section> -->
+<!-- <h2>Nav Buttons</h2> -->
 <!--  Back Button should be greyed out on this page -->
-<button class="back-button"
+<!-- <button class="back-button"
         type="button"
         ui-sref="">Back</button>
 <button class="store-button"
@@ -167,4 +190,4 @@
         ui-sref="store">Store</button>
 <button class="next-button"
         type="button"
-        ui-sref="career">Career</button>
+        ui-sref="career">Career</button> -->
