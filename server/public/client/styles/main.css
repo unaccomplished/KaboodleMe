@@ -1,4 +1,124 @@
+/*@import '..client/scripts/components/character/_character.css';*/
+
 .error-message {
   color: red;
   font-weight: bold;
+}
+
+/*Character component CSS*/
+.character {
+  background-color: lightblue;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.options-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.options-button {
+  border-radius: 5px;
+  font-size: 20px;
+  border: solid 4px;
+  width: 300px;
+  height: 100px;
+  background-color: white;
+  margin: 5px;
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: center;
+  background-color: lightblue;
+}
+
+.bottom-nav .store-button {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 5px solid red;
+  color: red;
+  font-size: 20px;
+  background-color: white;
+}
+
+.bottom-nav .back-button {
+  font-size: 15px;
+  height: 100px;
+  width: 100px;
+  border: 5px solid black;
+  background-color: white;
+}
+
+.bottom-nav .next-button {
+  font-size: 15px;
+  height: 100px;
+  width: 100px;
+  border: 5px solid black;
+  background-color: white;
+}
+
+/*Nav component CSS*/
+.nav {
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+}
+
+
+.main-menu-button {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 5px solid black;
+  color: black;
+  font-size: 20px;
+  background-color: white;
+  margin: 5px;
+}
+
+/*Music component CSS*/
+.music-button {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border: 5px solid black;
+  color: black;
+  font-size: 12px;
+  background-color: white;
+  margin: 5px;
+}
+
+/*Welcome component CSS*/
+.welcome {
+  text-align: center;
+}
+
+/*Menu component CSS*/
+.menu {
+  display: block;
+  flex-direction: column;
+  background-color: lightgreen;
+  justify-content: center;
+  position: fixed;
+  text-align: center;
+  height: 500px;
+  width: 500px;
+  border-radius: 15px;
+  border: 5px solid white;
+  color: white;
+  font: 20px arial, sans-serif;
+}
+
+.main-menu-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-button {
+  background-color: green;
 }

@@ -1,7 +1,7 @@
-<div class="charcter">
-  <h2>Character</h2>
+<div class="character">
   <div class="options-menu">
-    <button ng-repeat="(category, optionsList) in $ctrl.allOptions"
+    <button class="options-button"
+            ng-repeat="(category, optionsList) in $ctrl.allOptions"
             ng-click="$ctrl.showOption(category)">
             {{ category }}
     </button>
@@ -13,134 +13,15 @@
         {{option.name}}
       </li>
     </ul>
+    <button class="done-button" ng-click="">
+      Done
+    </button>
   </div>
 </div>
 
-
-
-<!-- <section>
-  <button class="character-button"
-          type="button">Gender</button>
-    <select>
-      <option>Male</option>
-      <option>Female</option>
-      <option>Royalty</option>
-    </select>
-</section>
-
+<!--
+<h2>Elite Items</h2>
 <section>
-  <button class="character-button"
-        type="button">Species</button>
-  <select>
-    <option>Siamese</option>
-    <option>Persian</option>
-    <option>Abyssinian</option>
-    <option>Ragamuffin</option>
-    <option>Main Coon</option>
-    <option>Ragdoll</option>
-    <option>American Shorthair</option>
-    <option>Tonkinese</option>
-    <option>Russian Blue</option>
-    <option>Bengal</option>
-    <option>Scottish Fold</option>
-    <option>British Shorthair</option>
-    <option>Siberian</option>
-    <option>Exotic</option>
-    <option>Himalayan</option>
-  </select>
-</section>
-
-<section>
-  <button class="character-button"
-        type="button">Eye Color</button>
-  <select>
-    <option>Yellow</option>
-    <option>Green</option>
-    <option>Blue</option>
-    <option>Black</option>
-    <option>Brown</option>
-    <option>Orange</option>
-  </select>
-</section>
-
-<section>
-  <button class="character-button"
-        type="button">Eye Type</button>
-  <select>
-    <option>Normal/Smart</option>
-    <option>Walleyed</option>
-    <option>Crosseyed</option>
-    <option>Evil/Slitted</option>
-  </select>
-</section>
-<section>
-  <button class="character-button"
-        type="button">Nose Color</button>
-  <select>
-    <option>Grey</option>
-    <option>Red</option>
-    <option>Pink</option>
-    <option>Copper</option>
-    <option>Black</option>
-  </select>
-</section>
-<section>
-  <button class="character-button"
-        type="button">Kissiepie (Mouth/Nose)</button>
-  <select>
-    <option>Rest</option>
-    <option>Smile</option>
-    <option>Yeah! (open)</option>
-    <option>Smile-Cry</option>
-    <option>M'lady/Smirk</option>
-    <option>Funs out, tongues out</option>
-    <option>O-Face</option>
-    <option>Jowls</option>
-  </select>
-</section>
-<section>
-  <button class="character-button"
-        type="button">Body Type</button>
-  <select>
-    <option>Biskit</option>
-    <option>Normal</option>
-    <option>Slim</option>
-    <option>Tall</option>
-    <option>Roundy</option>
-    <option>Bigboi</option>
-  </select>
-</section>
-<section>
-  <button class="character-button"
-        type="button">Outfits</button>
-  <select>
-    <option>Cowboy</option>
-    <option>Business Suit</option>
-    <option>Dunce Cap</option>
-    <option>Maid</option>
-    <option>Big Big Muscles</option>
-    <option>Dress</option>
-    <option>Jumpers</option>
-    <option>Mariachi</option>
-    <option>Pirate</option>
-    <option>Ninja</option>
-  </select>
-</section>
-<section>
-  <button class="character-button"
-        type="button">Items</button>
-  <select>
-    <option>Briefcase</option>
-    <option>ID</option>
-    <option>Ice Cream Cone</option>
-    <option>Slingshot</option>
-    <option>Pencil</option>
-    <option>Ball</option>
-    <option>Sign</option>
-  </select>
-
-</section>
-<h2>Elite Items</h2><section>
   <button class="character-button"
         type="button">Elite Items 1</button>
   <select>
@@ -178,16 +59,17 @@
     <option>Ball</option>
     <option>Sign</option>
   </select>
-
 </section> -->
-<!-- <h2>Nav Buttons</h2> -->
+
 <!--  Back Button should be greyed out on this page -->
-<!-- <button class="back-button"
-        type="button"
-        ui-sref="">Back</button>
-<button class="store-button"
-        type="button"
-        ui-sref="store">Store</button>
-<button class="next-button"
-        type="button"
-        ui-sref="career">Career</button> -->
+<div class="bottom-nav">
+  <button class="back-button"
+          type="button"
+          ui-sref="">BACK</button>
+  <button class="store-button"
+          type="button"
+          ui-sref="store">STORE</button>
+  <button class="next-button"
+          type="button"
+          ui-sref="career">CAREER</button>
+</div>

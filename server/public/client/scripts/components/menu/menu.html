@@ -1,15 +1,22 @@
-<!-- This should be a modal -->MODAL
-<h2>Main Menu</h2>
+<div class="menu">
+  MAIN MENU
+  <div class="main-menu-options">
+    <button class="menu-button"
+            type="button"
+            ui-sref="dashboard">My Character</button>
+    <button class="menu-button"
+            type="button"
+            ui-sref="store">Store</button>
+    <button class="menu-button"
+            type="button"
+            ui-sref="items">My Items</button>
+    <button class="menu-button"
+            type="button"
+            ui-sref="settings">Account Settings</button>
+  </div>
+  <button class="back-button"
+          type="button"
+          ui-sref="settings">Back</button>
+  <user-sign-out></user-sign-out>
 
-<button class="menu-button"
-        type="button"
-        ui-sref="dashboard">My Character</button><br>
-<button class="menu-button"
-        type="button"
-        ui-sref="store">Store</button><br>
-<button class="menu-button"
-        type="button"
-        ui-sref="items">My Items</button><br>
-<button class="menu-button"
-        type="button"
-        ui-sref="settings">Account Settings</button><br>
+</div>
