@@ -165,61 +165,6 @@
         },
         {
           name: 'bigboi'
-        },
-      ],
-      outfits: [
-        {
-          name: 'cowboy'
-        },
-        {
-          name: 'business suit'
-        },
-        {
-          name: 'dunce cap'
-        },
-        {
-          name: 'maid'
-        },
-        {
-          name: 'big big muscles'
-        },
-        {
-          name: 'dress'
-        },
-        {
-          name: 'jumpers'
-        },
-        {
-          name: 'mariachi'
-        },
-        {
-          name: 'pirate'
-        },
-        {
-          name: 'ninja'
-        }
-      ],
-      items: [
-        {
-          name: 'briefcase'
-        },
-        {
-          name: 'ID'
-        },
-        {
-          name: 'ice cream cone'
-        },
-        {
-          name: 'slingshot'
-        },
-        {
-          name: 'pencil'
-        },
-        {
-          name: 'ball'
-        },
-        {
-          name: 'sign'
         }
       ]
     }

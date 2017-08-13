@@ -1,11 +1,7 @@
 (function() {
   var menu = {
     templateUrl: 'client/scripts/components/menu/menu.html',
-    bindings: {
-      resolve: '<',
-      close: '&',
-      dismiss: '&'
-    },
+    bindings: {},
     controller: menuCtrl
   }
 
