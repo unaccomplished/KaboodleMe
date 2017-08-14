@@ -1,7 +1,9 @@
 (function() {
   var menu = {
     templateUrl: 'client/scripts/components/menu/menu.html',
-    bindings: {},
+    bindings: {
+      onToggle: '&?'
+    },
     controller: menuCtrl
   }
 

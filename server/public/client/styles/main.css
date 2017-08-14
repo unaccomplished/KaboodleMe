@@ -1,4 +1,4 @@
-/*@import '..client/scripts/components/character/_character.css';*/
+@import '../scripts/components/character/_character.css';
 
 html {
   font-family: Arial;

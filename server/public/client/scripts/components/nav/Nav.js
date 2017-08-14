@@ -8,6 +8,12 @@
   function navCtrl($state) {
     var $ctrl = this;
     $ctrl.pageTitle = _.capitalize($state.current.name);
+    $ctrl.showMenu = false;
+    $ctrl.toggleMenu = toggleMenu;
+
+    function toggleMenu() {
+      $ctrl.showMenu = !$ctrl.showMenu;
+    }
   }
 
   angular
