@@ -1,1 +1,16 @@
+.elite .options-menu {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+ }
 
+ .elite .options-button {
+   border-radius: 5px;
+   font-size: 20px;
+   border: solid 4px;
+   width: 300px;
+   height: 100px;
+   background-color: white;
+   margin: 5px;
+ }

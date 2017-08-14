@@ -1,0 +1,31 @@
+.career {
+  background-color: burlywood;
+}
+
+.career-render {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin: 10px;
+}
+
+.career-menu {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.career-button {
+  font-size: 15px;
+  height: 100px;
+  width: 100px;
+  border: none;
+  background-color: white;
+  margin: 15px;
+}
+
+.career .render {
+  color: black;
+}

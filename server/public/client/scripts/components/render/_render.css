@@ -1,0 +1,8 @@
+.render {
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 500px
+}
