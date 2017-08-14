@@ -245,3 +245,128 @@ html {
 .career .render {
   color: black;
 }
+
+/*Name Component CSS*/
+.name {
+  background-color: purple;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+
+.confirm-button {
+  background-color: darkblue;
+  color: white;
+  width: 150px;
+  height: 35px;
+}
+
+/*Name Input component CSS*/
+.name-input {
+  display: flex;
+  flex-direction: column;
+  background-color: royalblue;
+  /*justify-content: center;*/
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  height: 200px;
+  width: 380px;
+  border-radius: 15px;
+  border: 5px solid white;
+  color: white;
+  font: 18px;
+}
+
+.name-input form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+}
+
+.name-input input {
+  width: 90%;
+  height: 50px;
+  margin: 25px;
+}
+
+.confirm-button {
+  border: 3px solid white;
+  height: 50px;
+}
+
+/*Confirm Component CSS*/
+.confirm {
+  background-color: burlywood;
+}
+
+.confirm-render {
+  display: flex;
+  justify-content: center;
+}
+
+/*Save Component CSS*/
+.save {
+  background-color: royalblue;
+  /*justify-content: center;*/
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  height: 350px;
+  width: 900px;
+  border-radius: 15px;
+  border: 5px solid white;
+  color: white;
+  font: 18px;
+  padding: 20px;
+}
+
+.save .save-module {
+
+}
+
+.save-options {
+  display: flex;
+  justify-content: space-around;
+}
+
+.export-image {
+  font-size: 12px;
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 200px;
+  margin: 20px 0px;
+}
+
+.export-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: white;
+  border: none;
+  font-weight: bold;
+}
+
+.done-button {
+  width: 60px;
+  height: 25px;
+  border: none;
+  background-color: white;
+  margin-top: 20px;
+}

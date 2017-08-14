@@ -50,10 +50,6 @@
                 url: '/name',
                 component: 'name'
             })
-            .state('save', {
-                url: '/save',
-                component: 'save'
-            })
             .state('menu', {
                 url: '/menu',
                 component: 'menu'
@@ -65,6 +61,10 @@
             .state('settings', {
                 url: '/settings',
                 component: 'settings'
+            })
+            .state('confirm', {
+                url: '/confirm',
+                component: 'confirm'
             });
 
 

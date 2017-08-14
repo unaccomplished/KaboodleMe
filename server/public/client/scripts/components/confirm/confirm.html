@@ -1,0 +1,22 @@
+<div class="confirm">
+  <welcome></welcome>
+  <nav></nav>
+  <div class="confirm-render">
+    <render></render>
+  </div>
+  <save ng-show="$ctrl.showSave"></save>
+  <bottom-nav></bottom-nav>
+</div>
+
+User should see their character with career/background, name, <br>
+and automatically given an 8 digit Kittizen ID number. <br>
+
+<button class="back-button"
+        type="button"
+        ui-sref="dashboard">EDIT</button>
+<button class="store-button"
+        type="button"
+        ui-sref="store">Store</button>
+<button class="next-button"
+        type="button"
+        ng-click="$ctrl.showSave = !$ctrl.showSave">Save</button>
