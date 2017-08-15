@@ -7,6 +7,12 @@
 
   function confirmCtrl() {
     var $ctrl = this;
+    $ctrl.showSave = false;
+    $ctrl.toggleSave = toggleSave;
+
+    function toggleSave() {
+      $ctrl.showSave = !$ctrl.showSave;
+    }
   }
 
   angular

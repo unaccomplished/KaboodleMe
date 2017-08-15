@@ -4,7 +4,7 @@
   <div class="confirm-render">
     <render></render>
   </div>
-  <save ng-show="$ctrl.showSave"></save>
+  <save ng-show="$ctrl.showSave" on-toggle-save="$ctrl.toggleSave()"></save>
   <bottom-nav></bottom-nav>
 </div>
 
@@ -19,4 +19,4 @@ and automatically given an 8 digit Kittizen ID number. <br>
         ui-sref="store">Store</button>
 <button class="next-button"
         type="button"
-        ng-click="$ctrl.showSave = !$ctrl.showSave">Save</button>
+        ng-click="$ctrl.toggleSave()">Save</button>
