@@ -1,18 +1,15 @@
 <div class="character">
   <h4>ENGINEER AN OBEDIENT KITTIZEN</h4>
   <div class="options-menu">
-    <button class="options-button"
+    <!-- <button class="options-button"
             ng-repeat="(category, optionsList) in $ctrl.allOptions"
             ng-click="$ctrl.showOption(category)">
             {{ category }}
-    </button>
-  </div>
-
-  <div class="options-submenu">
-    <ul>
-      <li ng-repeat="option in $ctrl.visibleOptions">
-        {{option.name}}
-      </li>
-    </ul>
+    </button> -->
+    <trait-menu-option
+      ng-repeat="(category, optionsList) in $ctrl.allOptions"
+      category="category"
+      options="optionsList">
+    </trait-menu-option>
   </div>
 </div>

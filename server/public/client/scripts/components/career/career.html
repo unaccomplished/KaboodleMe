@@ -29,10 +29,17 @@
               ui-sref="">[NEXT]</button>
     </div>
   </div>
-  <bottom-nav></bottom-nav>
+
+  <bottom-nav
+    back-sref="dashboard"
+    back-title="Back"
+    next-sref="name"
+    next-title="Name">
+  </bottom-nav>
+
   <!-- <h2>Nav Buttons</h2> -->
   <!--  Back Button should be greyed out on this page -->
-  <button class="back-button"
+  <!-- <button class="back-button"
           type="button"
           ui-sref="dashboard">Back</button>
   <button class="store-button"
@@ -40,5 +47,5 @@
           ui-sref="store">Store</button>
   <button class="next-button"
           type="button"
-          ui-sref="name">Name</button>
+          ui-sref="name">Name</button> -->
 </div>

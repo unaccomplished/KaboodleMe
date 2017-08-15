@@ -1,11 +1,12 @@
 <div class="bottom-nav">
   <button class="back-button"
           type="button"
-          ui-sref="">BACK</button>
+          ui-sref="{{$ctrl.backSref}}">{{$ctrl.backTitle}}</button>
   <button class="store-button"
           type="button"
           ui-sref="store">STORE</button>
   <button class="next-button"
           type="button"
-          ui-sref="career">CAREER</button>
+          ng-click="$ctrl.nextOnClick()"
+          ui-sref="{{$ctrl.nextSref}}">{{$ctrl.nextTitle}}</button>
 </div>

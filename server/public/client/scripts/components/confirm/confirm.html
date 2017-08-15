@@ -5,7 +5,12 @@
     <render></render>
   </div>
   <save ng-show="$ctrl.showSave" on-toggle-save="$ctrl.toggleSave()"></save>
-  <bottom-nav></bottom-nav>
+  <bottom-nav
+    back-sref="name"
+    back-title="Back"
+    next-on-click="$ctrl.toggleSave()"
+    next-title="Save">
+  </bottom-nav>
 </div>
 
 User should see their character with career/background, name, <br>
