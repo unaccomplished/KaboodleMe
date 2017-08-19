@@ -1,6 +1,6 @@
 (function() {
   var bottomNav = {
-    templateUrl: 'client/scripts/components/bottomNav/bottom-nav.html',
+    templateUrl: 'client/scripts/components/bottom-nav/bottom-nav.html',
     bindings: {
       backSref: '@',
       backTitle: '@',

@@ -1,6 +1,6 @@
 (function() {
   var userSignOut = {
-    templateUrl: 'client/scripts/components/userSignOut/user-sign-out.html',
+    templateUrl: 'client/scripts/components/user-sign-out/user-sign-out.html',
     bindings: {
       resolve: '<',
       close: '&',

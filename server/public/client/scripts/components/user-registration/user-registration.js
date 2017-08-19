@@ -1,6 +1,6 @@
 (function() {
   var userRegistration = {
-    templateUrl: 'client/scripts/components/userRegistration/user-registration.html',
+    templateUrl: 'client/scripts/components/user-registration/user-registration.html',
     bindings: {
       resolve: '<',
       close: '&',

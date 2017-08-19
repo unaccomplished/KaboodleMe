@@ -1,6 +1,6 @@
 (function() {
   var nameInput = {
-    templateUrl: 'client/scripts/components/nameInput/name-input.html',
+    templateUrl: 'client/scripts/components/name-input/name-input.html',
     bindings: {
       resolve: '<',
       close: '&',

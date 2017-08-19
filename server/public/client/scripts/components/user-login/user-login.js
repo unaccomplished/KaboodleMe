@@ -1,6 +1,6 @@
 (function() {
   var userLogin = {
-    templateUrl: 'client/scripts/components/userLogin/user-login.html',
+    templateUrl: 'client/scripts/components/user-login/user-login.html',
     bindings: {
       resolve: '<',
       close: '&',

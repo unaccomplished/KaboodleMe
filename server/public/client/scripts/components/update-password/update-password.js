@@ -1,6 +1,6 @@
 (function() {
   var updatePassword = {
-    templateUrl: 'client/scripts/components/updatePassword/update-password.html',
+    templateUrl: 'client/scripts/components/update-password/update-password.html',
     bindings: {
       resolve: '<',
       close: '&',

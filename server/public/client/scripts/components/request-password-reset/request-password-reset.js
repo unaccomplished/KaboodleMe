@@ -1,6 +1,6 @@
 (function() {
   var requestPasswordReset = {
-    templateUrl: 'client/scripts/components/requestPasswordReset/request-password-reset.html',
+    templateUrl: 'client/scripts/components/request-password-reset/request-password-reset.html',
     bindings: {
       resolve: '<',
       close: '&',
