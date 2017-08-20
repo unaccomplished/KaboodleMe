@@ -2,15 +2,15 @@
     function HomeCtrl() {
       var $ctrl = this;
 
-      // $ctrl.openUserRegistration = openUserRegistration;
       $ctrl.toggleReg = toggleReg;
-
-      // function openUserRegistration() {
-      //   $ctrl.userRegistration;
-      // }
+      $ctrl.toggleLogin = toggleLogin;
 
       function toggleReg() {
         $ctrl.showReg = !$ctrl.showReg;
+      }
+
+      function toggleLogin() {
+        $ctrl.showLogin =!$ctrl.showLogin;
       }
     }
 

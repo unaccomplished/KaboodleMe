@@ -2,9 +2,7 @@
   var userLogin = {
     templateUrl: 'client/scripts/components/user-login/user-login.html',
     bindings: {
-      resolve: '<',
-      close: '&',
-      dismiss: '&'
+      onToggle: '&?'
     },
     controller: userLoginCtrl
   }
