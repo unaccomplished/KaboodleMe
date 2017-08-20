@@ -1,10 +1,10 @@
 <div class="trait-menu-option">
   {{$ctrl.category}}
 
-  <div>
-    <span ng-click="$ctrl.showPrev()">BACK</span>
-    <span ng-repeat="option in $ctrl.options"
+  <div class="trait-options">
+    <span class="trait-button" ng-click="$ctrl.showPrev()"><</span>
+    <span class="trait-name" ng-repeat="option in $ctrl.options"
           ng-show="$ctrl.isCurrent($index)">{{option.name}}</span>
-    <span ng-click="$ctrl.showNext()">NEXT</span>
+    <span class="trait-button" ng-click="$ctrl.showNext()">></span>
   </div>
 </div>

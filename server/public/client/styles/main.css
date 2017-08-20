@@ -21,6 +21,8 @@
 @import '../scripts/components/update-password/_update-password.css';
 @import '../scripts/components/user-login/_user-login.css';
 @import '../scripts/components/user-registration/_user-registration.css';
+@import '../scripts/components/trait-menu-option/_trait-menu-option.css';
+@import '../scripts/components/elite-menu-option/_elite-menu-option.css';
 
 html {
   font-family: Arial;
