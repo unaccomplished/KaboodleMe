@@ -19,6 +19,7 @@
     ng-show="$ctrl.showElite"
     ng-repeat="(category, optionsList) in $ctrl.allOptions"
     category="category"
-    options="optionsList">
+    options="optionsList"
+    on-Toggle="$ctrl.toggleElite()">
   </elite-menu-option>
 </div>

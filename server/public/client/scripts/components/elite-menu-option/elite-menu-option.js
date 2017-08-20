@@ -3,7 +3,8 @@
     templateUrl: 'client/scripts/components/elite-menu-option/elite-menu-option.html',
     bindings: {
       category: '<',
-      options: '<'
+      options: '<',
+      onToggle: '&?'
     },
     controller: eliteMenuOptionCtrl
   }

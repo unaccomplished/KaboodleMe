@@ -9,6 +9,7 @@
     var $ctrl = this;
 
     $ctrl.showElite = false;
+    $ctrl.toggleElite = toggleElite;
     $ctrl.showOption = showOption;
     $ctrl.visibleOptions = null;
 
@@ -116,10 +117,15 @@
       ]
     }
 
+
     function showOption(category) {
       console.log(category)
-      $ctrl.showElite = !$ctrl.showElite;
+      toggleElite();
       $ctrl.visibleOptions = $ctrl.allOptions[category];
+    }
+
+    function toggleElite() {
+      $ctrl.showElite = !$ctrl.showElite;
     }
 
   }
