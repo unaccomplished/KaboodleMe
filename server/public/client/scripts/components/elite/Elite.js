@@ -8,6 +8,7 @@
   function eliteCtrl() {
     var $ctrl = this;
 
+    $ctrl.showElite = false;
     $ctrl.showOption = showOption;
     $ctrl.visibleOptions = null;
 
@@ -116,8 +117,11 @@
     }
 
     function showOption(category) {
+      console.log(category)
+      $ctrl.showElite = !$ctrl.showElite;
       $ctrl.visibleOptions = $ctrl.allOptions[category];
     }
+
   }
 
   angular

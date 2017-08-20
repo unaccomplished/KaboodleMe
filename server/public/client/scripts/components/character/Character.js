@@ -8,7 +8,6 @@
   function characterCtrl() {
     var $ctrl = this;
 
-    $ctrl.showOption = showOption;
     $ctrl.visibleOptions = null;
 
     $ctrl.allOptions = {
@@ -169,9 +168,6 @@
       ]
     }
 
-    function showOption(category) {
-      $ctrl.visibleOptions = $ctrl.allOptions[category];
-    }
   }
 
   angular

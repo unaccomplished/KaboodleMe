@@ -3,7 +3,8 @@
 
   <div>
     <span ng-click="$ctrl.showPrev()">BACK</span>
-    <span ng-repeat="option in $ctrl.options" ng-show="$ctrl.isCurrent($index)">{{option.name}}</span>
+    <span ng-repeat="option in $ctrl.options"
+          ng-show="$ctrl.isCurrent($index)">{{option.name}}</span>
     <span ng-click="$ctrl.showNext()">NEXT</span>
   </div>
 </div>
