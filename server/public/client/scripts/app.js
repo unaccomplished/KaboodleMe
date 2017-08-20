@@ -61,6 +61,10 @@
             .state('confirm', {
                 url: '/confirm',
                 component: 'confirm'
+            })
+            .state('terms', {
+                url: '/terms',
+                component: 'terms'
             });
 
 

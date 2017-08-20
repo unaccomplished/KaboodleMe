@@ -23,6 +23,7 @@
 @import '../scripts/components/user-registration/_user-registration.css';
 @import '../scripts/components/trait-menu-option/_trait-menu-option.css';
 @import '../scripts/components/elite-menu-option/_elite-menu-option.css';
+@import '../scripts/components/terms/_terms.css';
 
 html {
   font-family: Arial;
