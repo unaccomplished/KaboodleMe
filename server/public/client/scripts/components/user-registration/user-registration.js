@@ -2,9 +2,7 @@
   var userRegistration = {
     templateUrl: 'client/scripts/components/user-registration/user-registration.html',
     bindings: {
-      resolve: '<',
-      close: '&',
-      dismiss: '&'
+      onToggle: '&?'
     },
     controller: userRegistrationCtrl
   }

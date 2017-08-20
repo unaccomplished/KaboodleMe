@@ -22,10 +22,6 @@
                   }
                 }
             })
-            .state('register', {
-                url: '/register',
-                component: 'userRegistration'
-            })
             .state('login', {
                 url: '/login',
                 component: 'userLogin'

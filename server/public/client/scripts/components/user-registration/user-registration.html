@@ -1,54 +1,63 @@
-<h2>Registration Page</h2>
-<form role="form">
-  <div class="form-group">
-    <label>email</label>
-    <input type="email"
-           name="email"
-           ng-model="$ctrl.registrationForm.email"
-           required
-           class="form-control"/>
+<div class="registration">
+  [CREATE A NEW ACCOUNT]
+  <form role="registration-form">
+    <div class="form-group">
+      <input type="email"
+             name="email"
+             placeholder="EMAIL"
+             ng-model="$ctrl.registrationForm.email"
+             required
+             class="form-control"/>
+    </div>
+
+    <div class="form-group">
+      <input type="password"
+             name="password"
+             placeholder="PASSWORD"
+             ng-model="$ctrl.registrationForm.password"
+             required
+             class="form-control"/>
+    </div>
+
+    <div class="form-group">
+      <input type="password"
+             name="password_confirmation"
+             placeholder="CONFIRM PASSWORD"
+             ng-model="$ctrl.registrationForm.password_confirmation"
+             required
+             class="form-control"/>
+      <span class="error-message">{{ $ctrl.errorMessage }}</span>
+    </div>
+
+    <div class="cancel-submit">
+      <button type="submit"
+              class="submit-button"
+              ng-click="$ctrl.onToggle()">CANCEL</button>
+
+      <button type="submit"
+              class="submit-button"
+              ng-click="$ctrl.register()">SUBMIT</button>
+    </div>
+
+    <span>OR</span>
+
+    <div class="social-login">
+      <button ng-click="$ctrl.registerSocial('facebook')">
+        [FACEBOOK LOGIN]
+      </button>
+      <button ng-click="$ctrl.registerSocial('google')">
+        [GOOGLE LOGIN]
+      </button>
+      <button ng-click="$ctrl.registerSocial('twitter')">
+        [TWITTER LOGIN]
+      </button>
+    </div>
+  </form>
+
+  <div class="login-account">
+    <label>Have an account?</label>
+    <button class="login-button"
+            type="button"
+            ui-sref="login">Login</button>
   </div>
-
-  <div class="form-group">
-    <label>password</label>
-    <input type="password"
-           name="password"
-           ng-model="$ctrl.registrationForm.password"
-           required
-           class="form-control"/>
-  </div>
-
-  <div class="form-group">
-    <label>password confirmation</label>
-    <input type="password"
-           name="password_confirmation"
-           ng-model="$ctrl.registrationForm.password_confirmation"
-           required
-           class="form-control"/>
-    <br><span class="error-message">{{ $ctrl.errorMessage }}</span>
-  </div>
-
-  <button type="submit"
-          class="btn btn-primary btn-lg"
-          ng-click="$ctrl.register()">Register</button>
-
-  <div class="form-group">
-    <label>or</label>
-    <button ng-click="$ctrl.registerSocial('facebook')">
-      Register with Facebook
-    </button>
-    <button ng-click="$ctrl.registerSocial('google')">
-      Register with Google
-    </button>
-    <button ng-click="$ctrl.registerSocial('twitter')">
-      Register with Twitter
-    </button>
-  </div>
-</form>
-
-<div class="login-account">
-  <label>Have an account?</label>
-  <button class="login-button"
-          type="button"
-          ui-sref="login">Login</button>
 </div>
