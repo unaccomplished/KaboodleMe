@@ -2,9 +2,7 @@
   var eliteMenuOption = {
     templateUrl: 'client/scripts/components/elite-menu-option/elite-menu-option.html',
     bindings: {
-      category: '<',
-      options: '<',
-      onToggle: '&?'
+      option: '<'
     },
     controller: eliteMenuOptionCtrl
   }

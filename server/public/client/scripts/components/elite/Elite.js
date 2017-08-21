@@ -119,9 +119,9 @@
 
 
     function showOption(category) {
-      console.log(category)
       toggleElite();
       $ctrl.visibleOptions = $ctrl.allOptions[category];
+      console.log(category, $ctrl.visibleOptions)
     }
 
     function toggleElite() {

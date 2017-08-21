@@ -1,5 +1,5 @@
 <div class="elite">
-  <div class="options-menu">
+  <div class="options-menu" ng-hide="$ctrl.showElite">
     <button class="options-button"
             ng-repeat="(category, optionsList) in $ctrl.allOptions"
             ng-click="$ctrl.showOption(category)">
@@ -7,19 +7,14 @@
     </button>
   </div>
 
-  <!-- <div class="options-submenu">
-    <ul>
-      <li ng-repeat="option in $ctrl.visibleOptions">
-        {{option.name}}
-      </li>
-    </ul>
-  </div> -->
-
-  <elite-menu-option
-    ng-show="$ctrl.showElite"
-    ng-repeat="(category, optionsList) in $ctrl.allOptions"
-    category="category"
-    options="optionsList"
-    on-Toggle="$ctrl.toggleElite()">
-  </elite-menu-option>
+  <div ng-show="$ctrl.showElite" class="elite-menu-options">
+    <elite-menu-option
+      ng-repeat="option in $ctrl.visibleOptions"
+      option="option">
+      <!-- on-select="$ctrl.optionSelect()"> -->
+    </elite-menu-option>
+    <button class="done-button" ng-click="$ctrl.toggleElite()">
+      Done
+    </button>
+  </div>
 </div>

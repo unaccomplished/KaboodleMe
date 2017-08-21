@@ -1,22 +1,3 @@
 <div class="elite-menu-option">
-  <!-- Category that was clicked: {{$ctrl.category}} -->
-  <span ng-repeat="option in $ctrl.options">{{option.name}}</span>
-  <!-- <div class="options-menu">
-    <button class="options-button"
-            ng-repeat="(category, optionsList) in $ctrl.allOptions"
-            ng-click="$ctrl.showOption(category)">
-            {{ category }}
-    </button>
-  </div>
-
-  <div class="options-submenu">
-    <ul>
-      <li ng-repeat="option in $ctrl.visibleOptions">
-        {{option.name}}
-      </li>
-    </ul> -->
-    <button class="done-button" ng-click="$ctrl.onToggle()">
-      Done
-    </button>
-  <!-- </div> -->
+  <span ng-repeat="(key, value) in $ctrl.option">{{$ctrl.option[key]}}</span>
 </div>
