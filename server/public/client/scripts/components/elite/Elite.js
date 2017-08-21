@@ -117,7 +117,6 @@
       ]
     }
 
-
     function showOption(category) {
       toggleElite();
       $ctrl.visibleOptions = $ctrl.allOptions[category];

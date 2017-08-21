@@ -1,11 +1,11 @@
 (function() {
-    function HomeCtrl() {
+    function homeCtrl() {
       var $ctrl = this;
 
-      $ctrl.toggleReg = toggleReg;
+      $ctrl.openReg = openReg;
       $ctrl.toggleLogin = toggleLogin;
 
-      function toggleReg() {
+      function openReg() {
         $ctrl.showReg = !$ctrl.showReg;
       }
 
@@ -16,5 +16,5 @@
 
     angular
         .module('kaboodleme')
-        .controller('HomeCtrl', [HomeCtrl]);
+        .controller('homeCtrl', [homeCtrl]);
 })();

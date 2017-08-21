@@ -2,7 +2,7 @@
   var userRegistration = {
     templateUrl: 'client/scripts/components/user-registration/user-registration.html',
     bindings: {
-      onToggle: '&?'
+      onCancel: '&?'
     },
     controller: userRegistrationCtrl
   }

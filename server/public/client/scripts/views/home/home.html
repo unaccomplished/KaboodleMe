@@ -4,10 +4,10 @@
 
   <button class="enter-button"
           type="button"
-          ng-click="$ctrl.toggleReg()">ENTER</button>
+          ng-click="$ctrl.openReg()">ENTER</button>
 
   <user-registration ng-show="$ctrl.showReg"
-                     on-toggle="$ctrl.toggleReg()">
+                     on-cancel="$ctrl.openReg()">
   </user-registration>
 
   <user-login ng-show="$ctrl.showLogin"
