@@ -9,8 +9,14 @@
     controller: renderCtrl
   }
 
-  function renderCtrl(user) {
+  function renderCtrl(characterCreator, $rootScope) {
     var $ctrl = this;
+
+    $ctrl.character = characterCreator.current();
+
+    $rootScope.$on('character.update', function() {
+      $ctrl.character = characterCreator.current();
+    });
   }
 
   angular

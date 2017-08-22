@@ -8,7 +8,7 @@
     controller: traitMenuOptionCtrl
   }
 
-  function traitMenuOptionCtrl() {
+  function traitMenuOptionCtrl(characterCreator) {
     var $ctrl = this;
 
     $ctrl.showPrev = showPrev;
@@ -26,6 +26,10 @@
       } else {
         $ctrl.currentlyShowingIndex++;
       }
+      var character = {};
+      character[$ctrl.category] = $ctrl.options[$ctrl.currentlyShowingIndex];
+      console.log(character);
+      characterCreator.updateChar(character);
     }
 
     function showPrev() {
@@ -34,6 +38,10 @@
       } else {
         $ctrl.currentlyShowingIndex--;
       }
+      var character = {};
+      character[$ctrl.category] = $ctrl.options[$ctrl.currentlyShowingIndex];
+      console.log(character);
+      characterCreator.updateChar(character);
     }
 
   }
