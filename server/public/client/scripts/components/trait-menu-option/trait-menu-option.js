@@ -27,7 +27,16 @@
         $ctrl.currentlyShowingIndex++;
       }
       var character = {};
+      // character.species = { name: 'siemese' };
       character[$ctrl.category] = $ctrl.options[$ctrl.currentlyShowingIndex];
+      // character = {
+      //   species: {
+      //     name: 'siemese',
+      //     src: 'fdsjlfj'
+      //   },
+      //  eye_color: {},
+      //  eye_type: {}
+      // }
       console.log(character);
       characterCreator.updateChar(character);
     }

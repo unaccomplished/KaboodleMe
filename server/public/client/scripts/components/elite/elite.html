@@ -7,14 +7,16 @@
     </button>
   </div>
 
-  <div ng-show="$ctrl.showElite" class="elite-menu-options">
-    <elite-menu-option
-      ng-repeat="option in $ctrl.visibleOptions"
-      option="option">
-      <!-- on-select="$ctrl.optionSelect()"> -->
-    </elite-menu-option>
+  <div class="elite-show-items" ng-show="$ctrl.showElite" class="elite-menu-options">
+    <div class="elite-title">ELITE ITEMS</div>
+    <div class="elite-options-menu">
+      <elite-menu-option
+        ng-repeat="option in $ctrl.visibleOptions"
+        option="option">
+      </elite-menu-option>
+    </div>
     <button class="done-button" ng-click="$ctrl.toggleElite()">
-      Done
+      DONE
     </button>
   </div>
 </div>

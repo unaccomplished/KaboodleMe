@@ -5,9 +5,21 @@
   background-color: lightgrey;
   text-align: center;
   vertical-align: middle;
+
 }
 
 img {
   width: 500px;
   height: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#body {
+  z-index: 1;
+}
+
+#eyes {
+  z-index: 2;
 }
