@@ -4,62 +4,34 @@ function characterCreator($rootScope) {
 
   var characterOpts = function() {
     return {
-    gender: [
-      {
-        name: 'male'
-      },
-      {
-        name: 'female'
-      },
-      {
-        name: 'royalty'
-      }
-    ],
+      body_type: [
+        {
+          name: 'normal',
+          src: 'kk_charprep_app1_bodytype_normal_'+(charInProgress.species ? charInProgress.species.name :DEFAULT_SPECIES)+'.png'
+        },
+        {
+          name: 'slim',
+          src: 'kk_charprep_app1_bodytype_slim_'+(charInProgress.species ? charInProgress.species.name :DEFAULT_SPECIES)+'.png'
+        }
+      ],
     species: [
       {
-        name: 'Siamese'
+        name: 'Orange',
+        src: 'kk_charprep_app1_bodytype_'+(charInProgress.body_type ? charInProgress.body_type.name : DEFAULT_BODY)+'_orange.png'
       },
       {
-        name: 'Persian'
+        name: 'Gray',
+        src: 'kk_charprep_app1_bodytype_'+(charInProgress.body_type ? charInProgress.body_type.name : DEFAULT_BODY)+'_gray.png'
+      }
+    ],
+    eye_type: [
+      {
+        name: 'round',
+        src: 'kk_charprep_app1_eyes_round_'+(charInProgress.eye_color ? charInProgress.eye_color.name : DEFAULT_EYE_COLOR)+'.png'
       },
       {
-        name: 'Abyssinian'
-      },
-      {
-        name: 'Ragamuffin'
-      },
-      {
-        name: 'Main Coon'
-      },
-      {
-        name: 'Ragdoll'
-      },
-      {
-        name: 'American Shorthair'
-      },
-      {
-        name: 'Tonkinese'
-      },
-      {
-        name: 'Russian Blue'
-      },
-      {
-        name: 'Bengal'
-      },
-      {
-        name: 'Scottish Fold'
-      },
-      {
-        name: 'British Shorthair'
-      },
-      {
-        name: 'Siberian'
-      },
-      {
-        name: 'Exotic'
-      },
-      {
-        name: 'Himalayan'
+        name: 'slit',
+        src: 'kk_charprep_app1_eyes_slit_'+(charInProgress.eye_color ? charInProgress.eye_color.name : DEFAULT_EYE_COLOR)+'.png'
       }
     ],
     eye_color: [
@@ -76,96 +48,43 @@ function characterCreator($rootScope) {
         src: 'kk_charprep_app1_eyes_'+(charInProgress.eye_type ? charInProgress.eye_type.name : DEFAULT_EYE_TYPE)+'_brown.png'
       }
     ],
-    eye_type: [
+    kissiepie: [
       {
-        name: 'round',
-        src: 'kk_charprep_app1_eyes_round_'+(charInProgress.eye_color ? charInProgress.eye_color.name : DEFAULT_EYE_COLOR)+'.png'
+        name: 'yeah! (open)',
+        src: 'kk_charprep_app1_kissiepie_agape_'+(charInProgress.nose_color ? charInProgress.nose_color.name : DEFAULT_NOSE_COLOR)+'.png'
       },
       {
-        name: 'slit',
-        src: 'kk_charprep_app1_eyes_slit_'+(charInProgress.eye_color ? charInProgress.eye_color.name : DEFAULT_EYE_COLOR)+'.png'
+        name: 'runs out, tongues out',
+        src: 'kk_charprep_app1_kissiepie_tongue_'+(charInProgress.nose_color ? charInProgress.nose_color.name : DEFAULT_NOSE_COLOR)+'.png'
       }
     ],
     nose_color: [
       {
-        name: 'grey'
+        name: 'black',
+        src: 'kk_charprep_app1_kissiepie_'+(charInProgress.kissiepie ? charInProgress.kissiepie.name : DEFAULT_KISSIEPIE)+'_black.png'
       },
       {
-        name: 'red'
-      },
-      {
-        name: 'pink'
-      },
-      {
-        name: 'copper'
-      },
-      {
-        name: 'black'
-      }
-    ],
-    kissiepie_mouth_nose: [
-      {
-        name: 'rest'
-      },
-      {
-        name: 'smile'
-      },
-      {
-        name: 'yeah! (open)'
-      },
-      {
-        name: 'smile-cry'
-      },
-      {
-        name: "m'lady/smirk"
-      },
-      {
-        name: 'runs out, tongues out'
-      },
-      {
-        name: 'o-face'
-      },
-      {
-        name: 'jowls'
-      }
-    ],
-    body_type: [
-      {
-        name: 'biskit',
-        src: 'kk_charprep_app1_bodytype_evansGRAY.png'
-      },
-      {
-        name: 'normal',
-        src: 'kk_charprep_app1_bodytype_evansORANGE.png'
-      },
-      {
-        name: 'slim',
-        src: 'kk_charprep_app1_bodytype_kittyGRAY.png'
-      },
-      {
-        name: 'tall',
-        src: 'kk_charprep_app1_bodytype_kittyOyGRAY.png'
-      },
-      {
-        name: 'roundy',
-        src: 'kk_charprep_app1_bodytype_evansGRAY.png'
-      },
-      {
-        name: 'bigboi',
-        src: 'kk_charprep_app1_bodytype_evansORANGE.png'
+        name: 'pink',
+        src: 'kk_charprep_app1_kissiepie_'+(charInProgress.kissiepie ? charInProgress.kissiepie.name : DEFAULT_KISSIEPIE)+'_pink.png'
       }
     ]
   };
 };
 
   var DEFAULT_BODY = characterOpts().body_type[0];
+  var DEFAULT_SPECIES = characterOpts().species[0];
   var DEFAULT_EYE_TYPE = characterOpts().eye_type[0];
   var DEFAULT_EYE_COLOR = characterOpts().eye_color[0];
+  var DEFAULT_KISSIEPIE = characterOpts().kissiepie[0];
+  var DEFAULT_NOSE_COLOR = characterOpts().nose_color[0];
 
   var charInProgress = {
     body_type: DEFAULT_BODY,
+    species: DEFAULT_SPECIES,
     eye_type: DEFAULT_EYE_TYPE,
     eye_color: DEFAULT_EYE_COLOR,
+    kissiepie: DEFAULT_KISSIEPIE,
+    nose_color: DEFAULT_NOSE_COLOR,
   };
 
   service.updateChar = updateChar;
