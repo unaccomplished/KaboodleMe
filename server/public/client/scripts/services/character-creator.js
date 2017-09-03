@@ -6,66 +6,66 @@ function characterCreator($rootScope) {
     return {
       body_type: [
         {
-          name: 'normal',
-          src: 'kk_charprep_app1_bodytype_normal_'+(charInProgress.species ? charInProgress.species.name :DEFAULT_SPECIES)+'.png'
+          name: 'norm',
+          src: 'kk_kmchar2_norm_'+(charInProgress.species ? charInProgress.species.name :DEFAULT_SPECIES)+'.png'
         },
         {
           name: 'slim',
-          src: 'kk_charprep_app1_bodytype_slim_'+(charInProgress.species ? charInProgress.species.name :DEFAULT_SPECIES)+'.png'
+          src: 'kk_kmchar2_slim_'+(charInProgress.species ? charInProgress.species.name :DEFAULT_SPECIES)+'.png'
         }
       ],
     species: [
       {
-        name: 'Orange',
-        src: 'kk_charprep_app1_bodytype_'+(charInProgress.body_type ? charInProgress.body_type.name : DEFAULT_BODY)+'_orange.png'
+        name: 'orange',
+        src: 'kk_kmchar2_'+(charInProgress.body_type ? charInProgress.body_type.name : DEFAULT_BODY)+'_orange.png'
       },
       {
-        name: 'Gray',
-        src: 'kk_charprep_app1_bodytype_'+(charInProgress.body_type ? charInProgress.body_type.name : DEFAULT_BODY)+'_gray.png'
+        name: 'gray',
+        src: 'kk_kmchar2_'+(charInProgress.body_type ? charInProgress.body_type.name : DEFAULT_BODY)+'_gray.png'
       }
     ],
     eye_type: [
       {
         name: 'round',
-        src: 'kk_charprep_app1_eyes_round_'+(charInProgress.eye_color ? charInProgress.eye_color.name : DEFAULT_EYE_COLOR)+'.png'
+        src: 'kk_kmchar2_'+(charInProgress.body_type ? charInProgress.body_type.name : DEFAULT_BODY)+'_round_'+(charInProgress.eye_color ? charInProgress.eye_color.name : DEFAULT_EYE_COLOR)+'.png'
       },
       {
         name: 'slit',
-        src: 'kk_charprep_app1_eyes_slit_'+(charInProgress.eye_color ? charInProgress.eye_color.name : DEFAULT_EYE_COLOR)+'.png'
+        src: 'kk_kmchar2_'+(charInProgress.body_type ? charInProgress.body_type.name : DEFAULT_BODY)+'_slit_'+(charInProgress.eye_color ? charInProgress.eye_color.name : DEFAULT_EYE_COLOR)+'.png'
       }
     ],
     eye_color: [
       {
         name: 'green',
-        src: 'kk_charprep_app1_eyes_'+(charInProgress.eye_type ? charInProgress.eye_type.name : DEFAULT_EYE_TYPE)+'_green.png'
+        src: 'kk_kmchar2_'+(charInProgress.body_type ? charInProgress.body_type.name : DEFAULT_BODY)+'_'+(charInProgress.eye_type ? charInProgress.eye_type.name : DEFAULT_EYE_TYPE)+'_green.png'
       },
       {
         name: 'blue',
-        src: 'kk_charprep_app1_eyes_'+(charInProgress.eye_type ? charInProgress.eye_type.name : DEFAULT_EYE_TYPE)+'_blue.png'
+        src: 'kk_kmchar2_'+(charInProgress.body_type ? charInProgress.body_type.name : DEFAULT_BODY)+'_'+(charInProgress.eye_type ? charInProgress.eye_type.name : DEFAULT_EYE_TYPE)+'_blue.png'
       },
       {
         name: 'brown',
-        src: 'kk_charprep_app1_eyes_'+(charInProgress.eye_type ? charInProgress.eye_type.name : DEFAULT_EYE_TYPE)+'_brown.png'
+        src: 'kk_kmchar2_'+(charInProgress.body_type ? charInProgress.body_type.name : DEFAULT_BODY)+'_'+(charInProgress.eye_type ? charInProgress.eye_type.name : DEFAULT_EYE_TYPE)+'_brown.png'
       }
     ],
     kissiepie: [
       {
-        name: 'yeah! (open)',
-        src: 'kk_charprep_app1_kissiepie_agape_'+(charInProgress.nose_color ? charInProgress.nose_color.name : DEFAULT_NOSE_COLOR)+'.png'
+        name: 'agape',
+        src: 'kk_kmchar2_'+(charInProgress.body_type ? charInProgress.body_type.name : DEFAULT_BODY)+'_agape_'+(charInProgress.nose_color ? charInProgress.nose_color.name : DEFAULT_NOSE_COLOR)+'.png'
       },
       {
-        name: 'runs out, tongues out',
-        src: 'kk_charprep_app1_kissiepie_tongue_'+(charInProgress.nose_color ? charInProgress.nose_color.name : DEFAULT_NOSE_COLOR)+'.png'
+        name: 'tongue',
+        src: 'kk_kmchar2_'+(charInProgress.body_type ? charInProgress.body_type.name : DEFAULT_BODY)+'_tongue_'+(charInProgress.nose_color ? charInProgress.nose_color.name : DEFAULT_NOSE_COLOR)+'.png'
       }
     ],
     nose_color: [
       {
         name: 'black',
-        src: 'kk_charprep_app1_kissiepie_'+(charInProgress.kissiepie ? charInProgress.kissiepie.name : DEFAULT_KISSIEPIE)+'_black.png'
+        src: 'kk_kmchar2_'+(charInProgress.body_type ? charInProgress.body_type.name : DEFAULT_BODY)+'_'+(charInProgress.kissiepie ? charInProgress.kissiepie.name : DEFAULT_KISSIEPIE)+'_black.png'
       },
       {
         name: 'pink',
-        src: 'kk_charprep_app1_kissiepie_'+(charInProgress.kissiepie ? charInProgress.kissiepie.name : DEFAULT_KISSIEPIE)+'_pink.png'
+        src: 'kk_kmchar2_'+(charInProgress.body_type ? charInProgress.body_type.name : DEFAULT_BODY)+'_'+(charInProgress.kissiepie ? charInProgress.kissiepie.name : DEFAULT_KISSIEPIE)+'_pink.png'
       }
     ]
   };
