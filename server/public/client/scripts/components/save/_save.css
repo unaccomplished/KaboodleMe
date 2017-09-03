@@ -15,6 +15,7 @@
   color: white;
   font: 18px;
   padding: 20px;
+  z-index: 20;
 }
 
 .save-options {
