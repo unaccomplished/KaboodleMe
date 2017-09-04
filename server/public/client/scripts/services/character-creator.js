@@ -93,9 +93,20 @@ function characterCreator($rootScope) {
 
   function updateChar(character) {
     charInProgress = _.extend(charInProgress, character);
+    formatEyeSrc();
     $rootScope.$broadcast('character.update');
     console.log(charInProgress)
     return current();
+  }
+
+  function formatEyeSrc() {
+    charInProgress.eye_src = 'kk_kmchar2_' +
+    (charInProgress.body_type ? charInProgress.body_type.name : DEFAULT_BODY) +
+    '_' +
+    (charInProgress.eye_type ? charInProgress.eye_type.name : DEFAULT_EYE_TYPE) +
+    '_' +
+    (charInProgress.eye_color ? charInProgress.eye_color.name : DEFAULT_EYE_COLOR) +
+    '.png';
   }
 
   function current() {
