@@ -108,8 +108,39 @@ function characterCreator($rootScope) {
     '.png';
   }
 
+  function formatOptionSrc() {
+    _.map(characterOpts(), function(optionsList, characterAttr) {
+      console.log(characterAttr, optionsList);
+      if (characterAttr === ('body_type' || 'species')) {
+        charInProgress[characterAttr].src = 'kk_kmchar2_' +
+        (charInProgress.body_type ? charInProgress.body_type.name : 'norm') +
+        '_' +
+        (charInProgress.species ? charInProgress.species.name : 'orange') +
+        '.png';
+      } else if (characterAttr === ('eye_type' || 'eye_color')) {
+        charInProgress[characterAttr].src = 'kk_kmchar2_' +
+        (charInProgress.body_type ? charInProgress.body_type.name : 'norm') +
+        '_' +
+        (charInProgress.eye_type ? charInProgress.eye_type.name : 'round') +
+        '_' +
+        (charInProgress.eye_color ? charInProgress.eye_color.name : 'blue') +
+        '.png';
+      } else if (characterAttr === ('kissiepie' || 'nose_color')) {
+        charInProgress[characterAttr].src = 'kk_kmchar2_' +
+        (charInProgress.body_type ? charInProgress.body_type.name : 'norm') +
+        '_' +
+        (charInProgress.kissiepie ? charInProgress.kissiepie.name : 'agape') +
+        '_' +
+        (charInProgress.nose_color ? charInProgress.nose_color.name : 'black') +
+        '.png';
+      }
+    });
+    console.log(charInProgress);
+  }
+
   function current() {
     formatEyeSrc();
+    formatOptionSrc();
     return charInProgress;
   }
 
