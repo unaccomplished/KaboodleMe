@@ -2,9 +2,14 @@
   {{$ctrl.category}}
 
   <div class="trait-options">
-    <span class="trait-button" ng-click="$ctrl.showPrev()"><</span>
-    <span class="trait-name" ng-repeat="option in $ctrl.options"
+    <img class="trait-button"
+          ng-click="$ctrl.showPrev()"
+          src="/assets/buttons/kk_button_selectblue_left.png"></img>
+    <span class="trait-name"
+          ng-repeat="option in $ctrl.options"
           ng-show="$ctrl.isCurrent($index)">{{option.name}}</span>
-    <span class="trait-button" ng-click="$ctrl.showNext()">></span>
+    <img class="trait-button"
+          ng-click="$ctrl.showNext()"
+          src="/assets/buttons/kk_button_selectblue.png"></img>
   </div>
 </div>

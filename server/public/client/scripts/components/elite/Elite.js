@@ -16,34 +16,10 @@
     $ctrl.allOptions = {
       outfits: [
         {
-          name: 'cowboy'
+          name: 'cloak'
         },
         {
-          name: 'business suit'
-        },
-        {
-          name: 'dunce cap'
-        },
-        {
-          name: 'maid'
-        },
-        {
-          name: 'big big muscles'
-        },
-        {
-          name: 'dress'
-        },
-        {
-          name: 'jumpers'
-        },
-        {
-          name: 'mariachi'
-        },
-        {
-          name: 'pirate'
-        },
-        {
-          name: 'ninja'
+          name: 'trenchcoat'
         }
       ],
       left_hand: [
@@ -92,27 +68,12 @@
           name: 'sign'
         }
       ],
-      hover_companion: [
+      special_item: [
         {
-          name: 'mouse'
+          name: 'brown boots'
         },
         {
-          name: 'mini-biskit'
-        },
-        {
-          name: 'drone'
-        },
-        {
-          name: 'kite'
-        },
-        {
-          name: 'butterfly'
-        },
-        {
-          name: 'bee'
-        },
-        {
-          name: 'tail bow'
+          name: 'red boots'
         }
       ]
     }
