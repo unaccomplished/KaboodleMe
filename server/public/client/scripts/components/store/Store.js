@@ -2,9 +2,7 @@
   var store = {
     templateUrl: 'client/scripts/components/store/store.html',
     bindings: {
-      resolve: '<',
-      close: '&',
-      dismiss: '&'
+      onToggle: '&?'
     },
     controller: storeCtrl
   }
