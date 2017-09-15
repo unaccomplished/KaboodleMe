@@ -1,6 +1,14 @@
 <div class="store">
   Store for Elite Items
 
+  <div class="store-options-menu">
+    <store-option
+      ng-repeat="(category, option) in $ctrl.allOptions"
+      category="category"
+      option="option">
+    </store-option>
+  </div>
+
   <button class="store-back-button"
           type="button"
           ng-click="$ctrl.onToggle()">BACK</button>
