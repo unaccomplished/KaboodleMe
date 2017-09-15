@@ -18,6 +18,7 @@
 @import '../scripts/components/request-password-reset/_request-password-reset.css';
 @import '../scripts/components/settings/_settings.css';
 @import '../scripts/components/store/_store.css';
+@import '../scripts/components/store-option/_store-option.css';
 @import '../scripts/components/store-cart/_store-cart.css';
 @import '../scripts/components/update-password/_update-password.css';
 @import '../scripts/components/user-login/_user-login.css';
