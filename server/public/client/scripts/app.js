@@ -34,10 +34,6 @@
                 url: '/updatepassword',
                 component: 'updatePassword'
             })
-            .state('store-cart', {
-                url: '/storecart',
-                component: 'storeCart'
-            })
             .state('career', {
                 url: '/career',
                 component: 'career'

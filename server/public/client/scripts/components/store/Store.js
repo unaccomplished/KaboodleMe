@@ -9,6 +9,7 @@
 
   function storeCtrl() {
     var $ctrl = this;
+    $ctrl.toggleCart = toggleCart;
 
     $ctrl.allOptions = {
       outfits: [
@@ -74,6 +75,10 @@
         }
       ]
     }
+
+  function toggleCart() {
+    $ctrl.showCart = !$ctrl.showCart;
+  }
 
   }
 
