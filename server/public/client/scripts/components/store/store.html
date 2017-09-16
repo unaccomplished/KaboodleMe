@@ -19,5 +19,8 @@
 
   <button class="cart-button"
           type="button"
-          ui-sref="store-cart">[CART BUTTON]</button>
+          ng-click="$ctrl.toggleCart()">[CART BUTTON]</button>
+
+  <store-cart ng-show="$ctrl.showCart"
+              on-toggle="$ctrl.toggleCart()"></store-cart>
 <div>

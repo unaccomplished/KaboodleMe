@@ -1,7 +1,9 @@
 (function() {
   var storeCart = {
     templateUrl: 'client/scripts/components/store-cart/store-cart.html',
-    bindings: {},
+    bindings: {
+      onToggle: '&?'
+    },
     controller: storeCartCtrl
   }
 
