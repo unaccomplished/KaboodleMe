@@ -37,8 +37,8 @@
 
 .store .cart-button {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 15px;
+  right: 15px;
   height: 75px;
   width: 75px;
   border-radius: 50%;
@@ -48,6 +48,6 @@
 
 .store .store-back-button {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -40px;
+  right: -25px;
 }
