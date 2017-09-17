@@ -23,6 +23,7 @@
 @import '../scripts/components/store-item-description/_store-item-description.css';
 @import '../scripts/components/store-back-button/_store-back-button.css';
 @import '../scripts/components/store-cart/_store-cart.css';
+@import '../scripts/components/store-cart-option/_store-cart-option.css';
 @import '../scripts/components/update-password/_update-password.css';
 @import '../scripts/components/user-login/_user-login.css';
 @import '../scripts/components/user-registration/_user-registration.css';
