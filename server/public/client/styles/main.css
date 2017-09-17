@@ -39,3 +39,11 @@ html {
   color: red;
   font-size: 12px;
 }
+
+button {
+  outline: none;
+}
+
+button:hover {
+  opacity: .5;
+}
