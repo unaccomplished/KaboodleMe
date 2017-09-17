@@ -1,0 +1,11 @@
+.store-item-description {
+  position: relative;
+  width: 350px;
+  height: 150px;
+  background-color: white;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 150px;
+  border-radius: 15px;
+  border: none;
+}

@@ -1,17 +1,20 @@
 <div class="store">
   Store for Elite Items
 
-  <div class="store-options-menu">
-    <store-option
-      ng-repeat="(category, option) in $ctrl.allOptions"
-      category="category"
-      option="option">
-    </store-option>
-  </div>
+  <div class="store-options">
+    <div class="store-left">
+      <store-option
+        ng-repeat="(category, option) in $ctrl.allOptions"
+        category="category"
+        option="option">
+      </store-option>
+    </div>
 
-  <button class="store-back-button"
-          type="button"
-          ng-click="$ctrl.onToggle()">BACK</button>
+    <div class="store-right">
+      <store-item-render></store-item-render>
+      <store-item-description></store-item-description>
+    </div>
+  </div>
 
   <button class="add-to-cart-button"
           type="button"
@@ -23,4 +26,7 @@
 
   <store-cart ng-show="$ctrl.showCart"
               on-toggle="$ctrl.toggleCart()"></store-cart>
+
+  <store-back-button
+    on-click="$ctrl.onToggle()"></store-back-button>
 <div>
