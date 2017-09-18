@@ -20,6 +20,15 @@
   padding: 20px;
 }
 
+.store .store-left {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 490px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
 .store .store-options {
   display: flex;
   flex-direction: row;
