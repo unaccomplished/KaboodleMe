@@ -3,11 +3,13 @@
 
   <div class="store-options">
     <div class="store-left">
-      <store-option
-        ng-repeat="(category, option) in $ctrl.allOptions"
-        category="category"
-        option="option">
-      </store-option>
+      <span ng-repeat="(category, options) in $ctrl.allOptions">
+        <store-option
+          ng-repeat="(key, value) in options"
+          category="key"
+          option="value">
+        </store-option>
+      </span>
     </div>
 
     <div class="store-right">
