@@ -13,10 +13,10 @@
 
   function bottomNavCtrl() {
     var $ctrl = this;
-    $ctrl.toggleStore = toggleStore;
+    $ctrl.toggleStoreModal = toggleStoreModal;
 
-    function toggleStore() {
-      $ctrl.showStore = !$ctrl.showStore;
+    function toggleStoreModal() {
+      $ctrl.showStoreModal = !$ctrl.showStoreModal;
     }
   }
 

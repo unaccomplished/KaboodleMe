@@ -7,7 +7,7 @@
   </button>
   <button class="store-button"
           type="button"
-          ng-click="$ctrl.toggleStore()">
+          ng-click="$ctrl.toggleStoreModal()">
           <span class="background-img"></span>
           <span class="title">STORE</span>
   </button>
@@ -19,6 +19,6 @@
           <span class="title">{{$ctrl.nextTitle}}</span>
   </button>
 
-  <store ng-show="$ctrl.showStore"
-         on-toggle="$ctrl.toggleStore()"></store>
+  <store-modal ng-show="$ctrl.showStoreModal"
+               on-toggle="$ctrl.toggleStoreModal()"></store-modal>
 </div>

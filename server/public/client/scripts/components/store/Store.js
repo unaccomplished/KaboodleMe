@@ -2,14 +2,14 @@
   var store = {
     templateUrl: 'client/scripts/components/store/store.html',
     bindings: {
-      onToggle: '&?'
+      onBackButton: '&?',
+      onShowCart: '&?'
     },
     controller: storeCtrl
   }
 
   function storeCtrl() {
     var $ctrl = this;
-    $ctrl.toggleCart = toggleCart;
 
     $ctrl.allOptions = {
       outfits: [
@@ -75,10 +75,6 @@
         }
       ]
     }
-
-  function toggleCart() {
-    $ctrl.showCart = !$ctrl.showCart;
-  }
 
   }
 

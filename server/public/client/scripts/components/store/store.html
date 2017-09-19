@@ -20,11 +20,8 @@
 
   <button class="cart-button"
           type="button"
-          ng-click="$ctrl.toggleCart()">[CART BUTTON]</button>
-
-  <store-cart ng-show="$ctrl.showCart"
-              on-toggle="$ctrl.toggleCart()"></store-cart>
+          ng-click="$ctrl.onShowCart()">[CART BUTTON]</button>
 
   <store-back-button
-    on-click="$ctrl.onToggle()"></store-back-button>
+    on-click="$ctrl.onBackButton()"></store-back-button>
 <div>

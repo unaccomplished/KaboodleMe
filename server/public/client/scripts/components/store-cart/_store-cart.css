@@ -1,25 +1,3 @@
-.store-cart {
-  display: block;
-  flex-direction: column;
-  background-color: yellow;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  text-align: center;
-  height: 500px;
-  width: 800px;
-  border-radius: 15px;
-  border: 5px solid black;
-  color: black;
-  font: 18px;
-  z-index: 25;
-  padding: 20px;
-}
-
 .store-cart .store-cart-options {
   display: flex;
   flex-direction: row;
@@ -48,4 +26,10 @@
   height: 50px;
   background-color: white;
   width: 150px;
+}
+
+.store-cart .store-back-button {
+  position: absolute;
+  top: -40px;
+  right: -25px;
 }
