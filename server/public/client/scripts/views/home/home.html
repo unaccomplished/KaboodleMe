@@ -4,13 +4,8 @@
 
   <button class="enter-button"
           type="button"
-          ng-click="$ctrl.openReg()">ENTER</button>
+          ng-click="$ctrl.toggleAuthentication()">ENTER</button>
 
-  <user-registration ng-show="$ctrl.showReg"
-                     on-cancel="$ctrl.openReg()">
-  </user-registration>
-
-  <user-login ng-show="$ctrl.showLogin"
-              on-toggle="$ctrl.toggleLogin()">
-  </user-login>
+  <authentication-modal ng-show="$ctrl.showAuthentication"
+                        on-toggle="$ctrl.toggleAuthentication()"></authentication-modal>
 </div>

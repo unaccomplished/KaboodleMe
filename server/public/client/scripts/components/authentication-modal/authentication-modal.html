@@ -1,0 +1,11 @@
+<div class="authentication-modal">
+  <user-registration ng-show="$ctrl.isActive('registration')"
+        on-login="$ctrl.setAsActive('login')"
+        on-cancel="$ctrl.onToggle()"></user-registration>
+  <user-login ng-show="$ctrl.isActive('login')"
+        on-cancel="$ctrl.setAsActive('registration')"
+        on-password-reset="$ctrl.setAsActive('passwordReset')"></user-login>
+  <request-password-reset ng-show="$ctrl.isActive('passwordReset')"
+        on-cancel="$ctrl.setAsActive('login')"
+        on-submit="$ctrl.setAsActive('passwordReset')"></request-password-reset>
+<div>

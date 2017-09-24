@@ -2,7 +2,8 @@
   var userLogin = {
     templateUrl: 'client/scripts/components/user-login/user-login.html',
     bindings: {
-      onToggle: '&?'
+      onCancel: '&?',
+      onPasswordReset: '&?'
     },
     controller: userLoginCtrl
   }

@@ -17,6 +17,7 @@
 @import '../scripts/components/items/_items.css';
 @import '../scripts/components/request-password-reset/_request-password-reset.css';
 @import '../scripts/components/settings/_settings.css';
+@import '../scripts/components/authentication-modal/_authentication-modal.css';
 @import '../scripts/components/store-modal/_store-modal.css';
 @import '../scripts/components/store/_store.css';
 @import '../scripts/components/store-option/_store-option.css';
