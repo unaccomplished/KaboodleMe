@@ -1,16 +1,10 @@
 (function() {
     function homeCtrl() {
       var $ctrl = this;
+      $ctrl.toggleAuthentication = toggleAuthentication;
 
-      $ctrl.openReg = openReg;
-      $ctrl.toggleLogin = toggleLogin;
-
-      function openReg() {
-        $ctrl.showReg = !$ctrl.showReg;
-      }
-
-      function toggleLogin() {
-        $ctrl.showLogin =!$ctrl.showLogin;
+      function toggleAuthentication() {
+        $ctrl.showAuthentication = !$ctrl.showAuthentication;
       }
     }
 

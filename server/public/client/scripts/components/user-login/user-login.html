@@ -22,7 +22,7 @@
 
   <div class="cancel-submit">
     <button class="submit-button"
-            ui-sref="home">CANCEL</button>
+            ng-click="$ctrl.onCancel()">CANCEL</button>
 
     <button type="submit"
             class="submit-button"
@@ -48,12 +48,12 @@
     DON'T HAVE AN ACCOUNT?
     <button class="register-button"
             type="button"
-            ng-click="$ctrl.toggleReg()">NEW ACCOUNT</button>
+            ng-click="$ctrl.onCancel()">NEW ACCOUNT</button>
   </div>
   <div class="forgot-password">
     FORGOT PASSWORD?
     <button class="request-password-button"
             type="button"
-            ui-sref="request-password">REQUEST PASSWORD RESET</button>
+            ng-click="$ctrl.onPasswordReset()">REQUEST PASSWORD RESET</button>
   </div>
 </div>

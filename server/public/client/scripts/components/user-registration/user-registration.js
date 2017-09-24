@@ -2,6 +2,7 @@
   var userRegistration = {
     templateUrl: 'client/scripts/components/user-registration/user-registration.html',
     bindings: {
+      onLogin: '&?',
       onCancel: '&?'
     },
     controller: userRegistrationCtrl
