@@ -13,11 +13,9 @@
     var $ctrl = this;
 
     $ctrl.character = characterCreator.current();
-    console.log($ctrl.character)
 
     $rootScope.$on('character.update', function() {
       $ctrl.character = characterCreator.current();
-      console.log($ctrl.character)
     });
   }
 

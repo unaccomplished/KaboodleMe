@@ -1,95 +1,35 @@
 function eliteItems($rootScope) {
   var service = {};
-  var charInProgress = {};
 
-  var itemOpts = function() {
+  service.fetchItems = fetchItems;
+  service.buyItems = buyItems;
+
+  function fetchItems() {
     return {
-      outfits: [
-        {
-          name: 'cloak'
-        },
-        {
-          name: 'trenchcoat'
+      cloak: {
+          purchased: true,
+          price: '99'
+      },
+      trenchcoat: {
+          purchased: false,
+          price: '33'
         }
-      ],
-      left_hand: [
-        {
-          name: 'briefcase'
-        },
-        {
-          name: 'ID'
-        },
-        {
-          name: 'ice cream cone'
-        },
-        {
-          name: 'slingshot'
-        },
-        {
-          name: 'pencil'
-        },
-        {
-          name: 'ball'
-        },
-        {
-          name: 'sign'
-        }
-      ],
-      right_hand: [
-        {
-          name: 'briefcase'
-        },
-        {
-          name: 'ID'
-        },
-        {
-          name: 'ice cream cone'
-        },
-        {
-          name: 'slingshot'
-        },
-        {
-          name: 'pencil'
-        },
-        {
-          name: 'ball'
-        },
-        {
-          name: 'sign'
-        }
-      ],
-      special_item: [
-        {
-          name: 'brown boots'
-        },
-        {
-          name: 'red boots'
-        }
-      ]
     };
-  };
-
-
-  service.updateChar = updateChar;
-  service.current = current;
-  service.fetchOptions = fetchOptions;
-
-  function updateChar(character) {
-    charInProgress = _.extend(charInProgress, character);
-    $rootScope.$broadcast('character.update');
-    console.log(charInProgress)
-    return current();
   }
 
-  function current() {
-    return charInProgress;
+  function fetchUserItems() {
+    return {
+      cloak: {
+          purchased: true,
+          price: '99'
+        }
+    };
   }
 
-  function fetchOptions() {
-    // EVentually this will return this data from the server
-    // via an ajax ($http) request
-    return itemOpts();
+  function buyItem(names) {
+    //Call to server
   }
+
 
   return service;
 }
