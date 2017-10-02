@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Character, type: :model do
   let(:user) { create(:user) }
-  let(:character) { Character.create!(user: user) }
+  let!(:character) { create(:character, user: user) }
 
   it { is_expected.to belong_to(:user) }
   it { is_expected.to have_many(:traits) }
