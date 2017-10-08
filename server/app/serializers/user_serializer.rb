@@ -11,5 +11,5 @@ class UserSerializer < ActiveModel::Serializer
 end
 
 # def purchases
-#   //logic to add array of purhased flags 
+#   //logic to add array of purchased flags 
 # end
