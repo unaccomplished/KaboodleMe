@@ -1,12 +1,12 @@
 class Api::V1::CharactersController < ApplicationController
   def show
-    character = Character.find(params[:user_id])
+    p Character.all
+    character = Character.find(user: current_user )
     render json: character, serializer: CharacterSerializer, status: 200
   end
 
   def update
-    #  set a trait or elite item
-    character = Character.find(params[:user_id])
+    character = Character.find(user: current_user)
     if character.update_attributes(character_params)
       render json: character, serializer: CharacterSerializer, status: 200
     else
@@ -16,6 +16,6 @@ class Api::V1::CharactersController < ApplicationController
 
   private
   def character_params
-    params.permit(:user_id, :name)
+    params.permit(:name, :trait_id, :elite_items_id)
   end
 end
