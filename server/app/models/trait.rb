@@ -1,3 +1,4 @@
 class Trait < ActiveRecord::Base
-  belongs_to :character
+  has_many :character_traits
+  has_many :characters, :through => :character_traits
 end
