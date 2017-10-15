@@ -11,31 +11,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171008011319) do
+ActiveRecord::Schema.define(version: 20171015000527) do
+
+  create_table "character_elite_items", force: :cascade do |t|
+    t.integer  "character_id"
+    t.integer  "elite_items_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "character_traits", force: :cascade do |t|
+    t.integer  "character_id"
+    t.integer  "trait_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "characters", force: :cascade do |t|
     t.text     "name"
     t.integer  "user_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-    t.integer  "trait_id"
-    t.integer  "elite_items_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  add_index "characters", ["elite_items_id"], name: "index_characters_on_elite_items_id"
-  add_index "characters", ["trait_id"], name: "index_characters_on_trait_id"
   add_index "characters", ["user_id"], name: "index_characters_on_user_id"
 
   create_table "elite_items", force: :cascade do |t|
     t.string   "name"
     t.decimal  "price"
     t.string   "src"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.integer  "character_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
-
-  add_index "elite_items", ["character_id"], name: "index_elite_items_on_character_id"
 
   create_table "purchases", force: :cascade do |t|
     t.integer  "user_id"
@@ -47,12 +54,9 @@ ActiveRecord::Schema.define(version: 20171008011319) do
   create_table "traits", force: :cascade do |t|
     t.string   "name"
     t.string   "src"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.integer  "character_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
-
-  add_index "traits", ["character_id"], name: "index_traits_on_character_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "provider",               default: "email", null: false
