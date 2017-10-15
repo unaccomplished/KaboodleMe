@@ -1,12 +1,12 @@
 class Api::V1::CharactersController < ApplicationController
   def show
     p Character.all
-    character = Character.find(user: current_user )
+    character = Character.find(user_id: current_user )
     render json: character, serializer: CharacterSerializer, status: 200
   end
 
   def update
-    character = Character.find(user: current_user)
+    character = Character.find(user_id: current_user)
     if character.update_attributes(character_params)
       render json: character, serializer: CharacterSerializer, status: 200
     else
