@@ -1,5 +1,5 @@
 class EliteItemsSerializer < ActiveModel::Serializer
-  attributes :id, :name, :price, :src
+  # attributes :id, :name, :price, :src
 
 #    return wether user has purchased or not
 #   {
