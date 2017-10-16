@@ -19,7 +19,7 @@ RSpec.describe Api::V1::CharactersController, type: :controller do
       expect(response).to have_http_status(:success)
     end
   end
-  
+
   describe "GET #update" do
     it "returns http success" do
       get :update
