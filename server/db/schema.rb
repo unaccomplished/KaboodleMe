@@ -15,9 +15,9 @@ ActiveRecord::Schema.define(version: 20171015000527) do
 
   create_table "character_elite_items", force: :cascade do |t|
     t.integer  "character_id"
-    t.integer  "elite_items_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.integer  "elite_item_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "character_traits", force: :cascade do |t|
@@ -46,9 +46,9 @@ ActiveRecord::Schema.define(version: 20171015000527) do
 
   create_table "purchases", force: :cascade do |t|
     t.integer  "user_id"
-    t.integer  "elite_items_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.integer  "elite_item_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "traits", force: :cascade do |t|

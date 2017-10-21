@@ -3,7 +3,7 @@ class CreatePurchases < ActiveRecord::Migration
     create_table :purchases do |t|
 
       t.integer :user_id
-      t.integer :elite_items_id
+      t.integer :elite_item_id
 
       t.timestamps null: false
     end
