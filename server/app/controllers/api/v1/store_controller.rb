@@ -1,7 +1,6 @@
 class Api::V1::StoreController < ApplicationController
   def buy
-    # @character = Character.where(user: current_user)
-    @elite_item = EliteItem.find(params[:id])
+    @elite_item = EliteItem.where(params[:id]).first
     current_user.elite_items << @elite_item
     render json: {
       elite_items: current_user.elite_items
@@ -9,8 +8,7 @@ class Api::V1::StoreController < ApplicationController
   end
 
   def sell
-    # @character = Character.where(user: current_user)
-    @elite_item = EliteItem.find(params[:id])
+    @elite_item = EliteItem.where(params[:id]).first
     current_user.elite_items.delete(@elite_item) #Maybe use destory
     render json:{
       elite_items: current_user.elite_items
