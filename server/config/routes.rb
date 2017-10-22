@@ -19,6 +19,12 @@ Rails.application.routes.draw do
 
   namespace :api do
   namespace :v1 do
+    get 'elite_items/show'
+    end
+  end
+
+  namespace :api do
+  namespace :v1 do
     get 'characters/show'
     end
   end
