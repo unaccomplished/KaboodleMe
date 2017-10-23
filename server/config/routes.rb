@@ -2,35 +2,10 @@ Rails.application.routes.draw do
   namespace :api do
   namespace :v1 do
     get 'store/buy'
-    end
-  end
-
-  namespace :api do
-  namespace :v1 do
     get 'store/sell'
-    end
-  end
-
-  namespace :api do
-  namespace :v1 do
     get 'elite_items/index'
-    end
-  end
-
-  namespace :api do
-  namespace :v1 do
     get 'elite_items/show'
-    end
-  end
-
-  namespace :api do
-  namespace :v1 do
     get 'characters/show'
-    end
-  end
-
-  namespace :api do
-  namespace :v1 do
     get 'characters/update'
     end
   end

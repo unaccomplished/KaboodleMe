@@ -8,7 +8,7 @@ class Api::V1::CharactersController < ApplicationController
     p Character.all
     character = Character.where(user: current_user).first
     if character.update_attributes(character_params)
-      render json: character, serializer: CharacterSerializer, status: 200
+      render json: character, status: 200
     else
       render json: {error: "Character update failed", status: 400}, status: 400
     end
