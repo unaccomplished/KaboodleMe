@@ -4,6 +4,8 @@ require 'user_helper'
 RSpec.describe Api::V1::CharactersController, type: :controller do
   let!(:user) { create(:user) }
   let!(:character) { create(:character, user: user) }
+  let!(:trait) { create(:trait) }
+  let!(:elite_item) { create(:elite_item) }
 
   before do
     authenticate_user user
@@ -24,9 +26,9 @@ RSpec.describe Api::V1::CharactersController, type: :controller do
 
     it "updates character with expected attributes" do
       new_name = "NewName"
+      new_trait = trait
+      new_elite_item = elite_item
       character.traits << new_trait
-      new_trait = 3
-      new_elite_item = 4
       put :update, id: character.id, character: {name: new_name, trait_id: new_trait, elite_item_id: new_elite_item}
       updated_character = JSON.parse(response.body)
       expect(updated_character["id"]).to eq character.id

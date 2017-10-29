@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Api::V1::EliteItemsController, type: :controller do
-  let!(:my_elite_item) { create(:elite_item) }
+  let!(:elite_item) { create(:elite_item) }
 
   describe "GET #index" do
     it "returns http success" do
@@ -11,7 +11,7 @@ RSpec.describe Api::V1::EliteItemsController, type: :controller do
 
     it "assigns EliteItem.all to elite_item" do
       get :index
-      expect(assigns(:elite_items)).to eq([my_elite_item])
+      expect(assigns(:elite_items)).to eq([elite_item])
     end
   end
 
