@@ -1,20 +1,18 @@
 Rails.application.routes.draw do
-  namespace :api do
-  namespace :v1 do
-    get 'store/buy'
-    get 'store/sell'
-    get 'elite_items/index'
-    get 'elite_items/show'
-    get 'characters/show'
-    get 'characters/update'
+  namespace :api, defaults: { format: :json } do
+    namespace :v1 do
+      mount_devise_token_auth_for 'User', at: 'auth'
+      resources :users
+
+      get 'store/buy'
+      get 'store/sell'
+      get 'elite_items/index'
+      get 'elite_items/show'
+      get 'characters/show'
+      get 'characters/update'
     end
   end
 
-  mount_devise_token_auth_for 'User', at: 'api/auth'
-
-  namespace :api, defaults: { format: :json } do
-    resources :users
-  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
