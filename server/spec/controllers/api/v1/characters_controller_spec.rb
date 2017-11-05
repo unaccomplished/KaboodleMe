@@ -1,5 +1,5 @@
 require 'rails_helper'
-require 'user_helper'
+# require 'user_helper'
 
 RSpec.describe Api::V1::CharactersController, type: :controller do
   let!(:user) { create(:user) }
