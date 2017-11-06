@@ -56,6 +56,7 @@ function characterCreator($rootScope) {
     charInProgress = _.extend(charInProgress, character);
     $rootScope.$broadcast('character.update');
     console.log(charInProgress)
+    // $http.post(/api/v1/character, charInProgress);
     return current();
   }
 

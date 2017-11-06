@@ -6,6 +6,11 @@
       function toggleAuthentication() {
         $ctrl.showAuthentication = !$ctrl.showAuthentication;
       }
+      // $http.post('/api/character') // Createas a chracter
+      //
+      // function onClickCharacterUpdate() {
+      //   $http.put('/api/character', $ctrl.character);
+      // }
     }
 
     angular

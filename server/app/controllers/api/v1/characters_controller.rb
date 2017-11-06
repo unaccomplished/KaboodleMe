@@ -6,26 +6,25 @@ class Api::V1::CharactersController < ApplicationController
 
   def update
     character = Character.where(user: current_user).first
-    trait = Trait.find(params[:id])
-    elite_item = EliteItem.find(params[:id])
 
-    params.each do |key, value|
-      if trait
-        character.traits << trait
-      elsif elite_item
-        character.elite_items << elite_item
-      else
-        character.update_attributes(character_params)
-      end
+    # The below line does not work, name is not being updated
+    character.update_attributes(character_params) if character_params
+
+    if params[:character][:trait_id]
+      trait = Trait.find(params[:character][:trait_id])
+      character.traits << trait if trait
     end
-    render json: {
-      character: character.traits
-    }, serializer: CharacterSerializer
-    # if character.update_attributes(character_params)
-    #   render json: character, status: 200
-    # else
-    #   render json: {error: "Character update failed", status: 400}, status: 400
-    # end
+
+    if params[:character][:elite_item_id]
+      elite_item = EliteItem.find(params[:character][:elite_item_id])
+      character.elite_items << elite_item if elite_item
+    end
+
+    render json: character, serializer: CharacterSerializer
+  end
+
+  def create
+    #Do this
   end
 
   private

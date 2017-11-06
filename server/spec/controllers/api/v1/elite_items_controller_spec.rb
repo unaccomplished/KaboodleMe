@@ -11,7 +11,10 @@ RSpec.describe Api::V1::EliteItemsController, type: :controller do
 
     it "assigns EliteItem.all to elite_item" do
       get :index
-      expect(assigns(:elite_items)).to eq([elite_item])
+      resp = JSON.parse(response.body)
+      p resp
+      ## not completed, see what resp has
+      expect(resp).to eq([elite_item])
     end
   end
 

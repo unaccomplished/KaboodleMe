@@ -18,9 +18,9 @@ RSpec.describe Api::V1::CharactersController, type: :controller do
     end
   end
 
-  describe "GET #update" do
+  describe "PUT #update" do
     it "returns http success" do
-      get :update
+      put :update, id: character.id, character: {name: 'foo'}
       expect(response).to have_http_status(:success)
     end
 
@@ -28,12 +28,12 @@ RSpec.describe Api::V1::CharactersController, type: :controller do
       new_name = "NewName"
       new_trait = trait
       new_elite_item = elite_item
-      character.traits << new_trait
       put :update, id: character.id, character: {name: new_name, trait_id: new_trait, elite_item_id: new_elite_item}
       updated_character = JSON.parse(response.body)
-      expect(updated_character["id"]).to eq character.id
-      expect(updated_character["trait_id"]).to eq character.traits
-      expect(updated_character["elite_item_id"]).to eq character.new_elite_item
+
+      expect(updated_character["name"]).to eq new_name
+      expect(updated_character["traits"].first["id"]).to eq new_trait.id
+      expect(updated_character["elite_items"].first["id"]).to eq new_elite_item.id
     end
 
   end

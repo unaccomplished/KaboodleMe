@@ -9,27 +9,27 @@ RSpec.describe Api::V1::StoreController, type: :controller do
     authenticate_user user
   end
 
-  describe "GET #buy" do
+  describe "PUT #buy" do
     it "returns http success" do
-      get :buy
+      put :buy
       expect(response).to have_http_status(:success)
     end
 
     it "adds elite_item to current_user.elite_items" do
       put :buy, elite_item_id: elite_item.id, user_id: user.id
-      expect(user.elite_items).size.should_be 1
+      expect(user.elite_items.size).to eq 1
     end
   end
 
-  describe "GET #sell" do
+  describe "PUT #sell" do
     it "returns http success" do
-      get :sell
+      put :sell
       expect(response).to have_http_status(:success)
     end
 
     it "destroys elite_item from current_user.elite_items" do
-      put :buy, elite_item_id: elite_item.id, user_id: user.id
-      expect(user.elite_items).size.should_be 0
+      put :sell, elite_item_id: elite_item.id, user_id: user.id
+      expect(user.elite_items.size).to eq 0
     end
   end
 
