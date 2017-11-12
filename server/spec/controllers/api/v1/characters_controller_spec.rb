@@ -18,6 +18,14 @@ RSpec.describe Api::V1::CharactersController, type: :controller do
     end
   end
 
+  describe "POST create" do
+    let(:new_character) { create(:character, user: user) }
+
+    it "increases the number of characters by 1" do
+      expect{ post :create, character: new_character}.to change(Character,:count).by(1)
+    end
+  end
+
   describe "PUT #update" do
     it "returns http success" do
       put :update, id: character.id, character: {name: 'foo'}

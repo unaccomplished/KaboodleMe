@@ -13,6 +13,7 @@ RSpec.describe Api::V1::EliteItemsController, type: :controller do
       get :index
       resp = JSON.parse(response.body)
       p resp
+      # binding.pry
       ## not completed, see what resp has
       expect(resp).to eq([elite_item])
     end

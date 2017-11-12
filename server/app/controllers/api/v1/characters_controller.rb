@@ -4,11 +4,16 @@ class Api::V1::CharactersController < ApplicationController
     render json: character, serializer: CharacterSerializer, status: 200
   end
 
+  def create
+    character = Character.new(character_params)
+    render json: character, serializer: CharacterSerializer, status: 200
+  end
+
   def update
     character = Character.where(user: current_user).first
 
     # The below line does not work, name is not being updated
-    character.update_attributes(character_params) if character_params
+    character.update(character_params) if character_params
 
     if params[:character][:trait_id]
       trait = Trait.find(params[:character][:trait_id])
@@ -21,10 +26,6 @@ class Api::V1::CharactersController < ApplicationController
     end
 
     render json: character, serializer: CharacterSerializer
-  end
-
-  def create
-    #Do this
   end
 
   private

@@ -1,7 +1,7 @@
 class Api::V1::EliteItemsController < ApplicationController
   def index
     elite_items = EliteItem.all
-    p elite_items
+    # p elite_items
     render json: elite_items, each_serializer: EliteItemsSerializer
   end
 

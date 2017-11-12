@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       get 'elite_items/index'
       get 'elite_items/show'
       get 'characters/show'
+      get 'characters/create'
       get 'characters/update'
     end
   end
