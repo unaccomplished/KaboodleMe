@@ -5,3 +5,71 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Trait.create!(
+    name: 'norm',
+    trait_type: 'body'
+)
+
+Trait.create!(
+    name: 'slim',
+    trait_type: 'body'
+)
+
+Trait.create!(
+    name: 'orange',
+    trait_type: 'species'
+)
+
+Trait.create!(
+    name: 'gray',
+    trait_type: 'species'
+)
+
+Trait.create!(
+    name: 'round',
+    trait_type: 'eye'
+)
+
+Trait.create!(
+    name: 'slit',
+    trait_type: 'eye'
+)
+
+Trait.create!(
+    name: 'green',
+    trait_type: 'eye_color'
+)
+
+Trait.create!(
+    name: 'blue',
+    trait_type: 'eye_color'
+)
+
+Trait.create!(
+    name: 'brown',
+    trait_type: 'eye_color'
+)
+
+Trait.create!(
+    name: 'agape',
+    trait_type: 'kissiepie'
+)
+
+Trait.create!(
+    name: 'tongue',
+    trait_type: 'kissiepie'
+)
+
+Trait.create!(
+    name: 'black',
+    trait_type: 'nose_color'
+)
+
+Trait.create!(
+    name: 'pink',
+    trait_type: 'nose_color'
+)
+
+
+traits = Trait.all

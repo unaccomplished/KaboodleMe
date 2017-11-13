@@ -1,4 +1,4 @@
-function characterCreator($rootScope) {
+function characterCreator($rootScope, $http) {
   var service = {};
   var charInProgress = {};
 
@@ -52,11 +52,21 @@ function characterCreator($rootScope) {
   service.current = current;
   service.fetchOptions = fetchOptions;
 
+  initCharacter();
+
+  function initCharacter() {
+    $http.get('/api/v1/characters')
+      .then(function(resp) {
+        charInProgress = resp.data;
+        // console.log(resp)
+      })
+  }
+
   function updateChar(character) {
     charInProgress = _.extend(charInProgress, character);
     $rootScope.$broadcast('character.update');
     console.log(charInProgress)
-    // $http.post(/api/v1/character, charInProgress);
+    // $http.post(/api/v1/char acter, charInProgress);
     return current();
   }
 

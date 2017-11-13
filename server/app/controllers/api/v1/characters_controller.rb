@@ -1,12 +1,16 @@
 class Api::V1::CharactersController < ApplicationController
-  def show
+  def index
     character = Character.where(user: current_user).first
+    if(!character)
+      character = Character.new(character_params)
+    end
     render json: character, serializer: CharacterSerializer, status: 200
   end
 
+  def show
+  end
+
   def create
-    character = Character.new(character_params)
-    render json: character, serializer: CharacterSerializer, status: 200
   end
 
   def update
