@@ -1,0 +1,25 @@
+<div class="menu">
+  <div class="menu-inside">
+    MAIN MENU: [CHARACTER NAME]
+    <div class="main-menu-options">
+      <button class="menu-button"
+              type="button"
+              ui-sref="dashboard">MY CHARACTER</button>
+      <button class="menu-button"
+              type="button"
+              ui-sref="store">STORE</button>
+      <button class="menu-button"
+              type="button"
+              ui-sref="items">MY ITEMS</button>
+      <button class="menu-button"
+              type="button"
+              ui-sref="settings">ACCOUNT SETTINGS</button>
+    </div>
+    <div class="menu-nav">
+      <button class="back-button"
+              type="button"
+              ng-click="$ctrl.onToggle()">CLOSE</button>
+      <user-sign-out></user-sign-out>
+    </div>
+  </div>
+</div>

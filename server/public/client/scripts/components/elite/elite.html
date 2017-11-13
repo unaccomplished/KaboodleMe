@@ -1,0 +1,23 @@
+<div class="elite">
+  <div class="options-menu" ng-hide="$ctrl.showElite">
+    <button class="options-button"
+            ng-repeat="(category, optionsList) in $ctrl.allOptions"
+            ng-click="$ctrl.showOption(category)">
+            {{ category }}
+    </button>
+  </div>
+
+  <div class="elite-show-items"
+       ng-show="$ctrl.showElite"
+       class="elite-menu-options">
+    <div class="elite-title">ELITE ITEMS</div>
+    <div class="elite-options-menu">
+      <elite-menu-option
+        ng-repeat="option in $ctrl.visibleOptions"
+        option="option">
+      </elite-menu-option>
+    </div>
+    <button class="done-button"
+            ng-click="$ctrl.toggleElite()">DONE</button>
+  </div>
+</div>

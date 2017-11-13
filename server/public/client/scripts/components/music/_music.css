@@ -1,0 +1,10 @@
+.music-button {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border: 5px solid black;
+  color: black;
+  font-size: 12px;
+  background-color: white;
+  margin: 5px;
+}

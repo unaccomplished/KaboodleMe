@@ -1,6 +1,13 @@
-<h2>Dashbaord</h2>
-
-Welcome {{$ctrl.currentUser.email}}</br>
-You are Logged In!
-
-<user-sign-out></user-sign-out>
+<div class="dashboard">
+  <welcome></welcome>
+  <nav></nav>
+  <div class="character-render">
+    <character></character>
+    <render></render>
+    <elite></elite>
+  </div>
+  <bottom-nav
+    next-sref="career"
+    next-title="CAREER">
+  </bottom-nav>
+</div>

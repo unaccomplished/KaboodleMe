@@ -1,0 +1,51 @@
+<div class="career">
+  <welcome></welcome>
+  <nav></nav>
+  <div class="career-render">
+    <h1>[NAME OF CAREER]</h1>
+    <div class="options-menu">
+      <button class="options-button"
+              ng-repeat="(category, optionsList) in $ctrl.allOptions"
+              ng-click="$ctrl.showOption(category)">
+              {{ category }}
+      </button>
+    </div>
+
+    <div class="options-submenu">
+      <ul>
+        <li ng-repeat="option in $ctrl.visibleOptions">
+          {{option.name}}
+        </li>
+      </ul>
+    </div>
+
+    <div class="career-menu">
+      <button class="career-button"
+              type="button"
+              ui-sref="">[PREVIOUS]</button>
+      <render></render>
+      <button class="career-button"
+              type="button"
+              ui-sref="">[NEXT]</button>
+    </div>
+  </div>
+
+  <bottom-nav
+    back-sref="dashboard"
+    back-title="BACK"
+    next-sref="name"
+    next-title="NAME">
+  </bottom-nav>
+
+  <!-- <h2>Nav Buttons</h2> -->
+  <!--  Back Button should be greyed out on this page -->
+  <!-- <button class="back-button"
+          type="button"
+          ui-sref="dashboard">Back</button>
+  <button class="store-button"
+          type="button"
+          ui-sref="store">Store</button>
+  <button class="next-button"
+          type="button"
+          ui-sref="name">Name</button> -->
+</div>

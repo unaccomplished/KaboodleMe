@@ -1,4 +1,35 @@
+@import '../scripts/views/home/_home.css';
+@import '../scripts/components/character/_character.css';
+@import '../scripts/components/dashboard/_dashboard.css';
+@import '../scripts/components/elite/_elite.css';
+@import '../scripts/components/render/_render.css';
+@import '../scripts/components/bottom-nav/_bottom-nav.css';
+@import '../scripts/components/nav/_nav.css';
+@import '../scripts/components/music/_music.css';
+@import '../scripts/components/welcome/_welcome.css';
+@import '../scripts/components/menu/_menu.css';
+@import '../scripts/components/user-sign-out/_user-sign-out.css';
+@import '../scripts/components/career/_career.css';
+@import '../scripts/components/name/_name.css';
+@import '../scripts/components/name-input/_name-input.css';
+@import '../scripts/components/confirm/_confirm.css';
+@import '../scripts/components/save/_save.css';
+@import '../scripts/components/items/_items.css';
+@import '../scripts/components/request-password-reset/_request-password-reset.css';
+@import '../scripts/components/settings/_settings.css';
+@import '../scripts/components/store/_store.css';
+@import '../scripts/components/update-password/_update-password.css';
+@import '../scripts/components/user-login/_user-login.css';
+@import '../scripts/components/user-registration/_user-registration.css';
+@import '../scripts/components/trait-menu-option/_trait-menu-option.css';
+@import '../scripts/components/elite-menu-option/_elite-menu-option.css';
+@import '../scripts/components/terms/_terms.css';
+
+html {
+  font-family: Arial;
+}
+
 .error-message {
   color: red;
-  font-weight: bold;
+  font-size: 12px;
 }

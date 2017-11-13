@@ -1,0 +1,11 @@
+.name {
+  background-color: purple;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name-render {
+  display: flex;
+  justify-content: center;
+}

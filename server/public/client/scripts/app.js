@@ -9,7 +9,7 @@
         $stateProvider
             .state('home', {
                 url: '/',
-                controller: 'HomeCtrl',
+                controller: 'homeCtrl',
                 controllerAs: '$ctrl',
                 templateUrl: 'client/scripts/views/home/home.html'
             })
@@ -22,10 +22,6 @@
                   }
                 }
             })
-            .state('register', {
-                url: '/register',
-                component: 'userRegistration'
-            })
             .state('login', {
                 url: '/login',
                 component: 'userLogin'
@@ -37,6 +33,38 @@
             .state('update-password', {
                 url: '/updatepassword',
                 component: 'updatePassword'
+            })
+            .state('store', {
+                url: '/store',
+                component: 'store'
+            })
+            .state('career', {
+                url: '/career',
+                component: 'career'
+            })
+            .state('name', {
+                url: '/name',
+                component: 'name'
+            })
+            .state('menu', {
+                url: '/menu',
+                component: 'menu'
+            })
+            .state('items', {
+                url: '/items',
+                component: 'items'
+            })
+            .state('settings', {
+                url: '/settings',
+                component: 'settings'
+            })
+            .state('confirm', {
+                url: '/confirm',
+                component: 'confirm'
+            })
+            .state('terms', {
+                url: '/terms',
+                component: 'terms'
             });
 
 

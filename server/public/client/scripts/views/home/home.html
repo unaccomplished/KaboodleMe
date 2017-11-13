@@ -1,8 +1,16 @@
-<div>
+<div class="home">
   <h1>KaboodleMe Home Page</h1>
   <h5>Create your own kitten character in the world of Kittopia, from The Kitten Kaboodle Show</h5>
 
-  <button class="start-button"
+  <button class="enter-button"
           type="button"
-          ui-sref="register">Start Here</button>
+          ng-click="$ctrl.openReg()">ENTER</button>
+
+  <user-registration ng-show="$ctrl.showReg"
+                     on-cancel="$ctrl.openReg()">
+  </user-registration>
+
+  <user-login ng-show="$ctrl.showLogin"
+              on-toggle="$ctrl.toggleLogin()">
+  </user-login>
 </div>
