@@ -3,49 +3,57 @@ function characterCreator($rootScope, $http) {
   var charInProgress = {};
 
   var characterOpts = function() {
-    return {
-      body_type: [
-        {name: 'norm'},
-        {name: 'slim'}
-      ],
-      species: [
-        {name: 'orange'},
-        {name: 'gray'}
-      ],
-      eye_type: [
-        {name: 'round'},
-        {name: 'slit'}
-      ],
-      eye_color: [
-        {name: 'green'},
-        {name: 'blue'},
-        {name: 'brown'}
-      ],
-      kissiepie: [
-        {name: 'agape'},
-        {name: 'tongue'}
-      ],
-      nose_color: [
-        {name: 'black'},
-        {name: 'pink'}
-      ]
-    };
+    $http.get('/api/v1/characters')
+      .then(function(resp) {
+        return resp.data;
+      })
+    // return {
+    //   body_type: [
+    //     {name: 'norm'},
+    //     {name: 'slim'}
+    //   ],
+    //   species: [
+    //     {name: 'orange'},
+    //     {name: 'gray'}
+    //   ],
+    //   eye_type: [
+    //     {name: 'round'},
+    //     {name: 'slit'}
+    //   ],
+    //   eye_color: [
+    //     {name: 'green'},
+    //     {name: 'blue'},
+    //     {name: 'brown'}
+    //   ],
+    //   kissiepie: [
+    //     {name: 'agape'},
+    //     {name: 'tongue'}
+    //   ],
+    //   nose_color: [
+    //     {name: 'black'},
+    //     {name: 'pink'}
+    //   ]
+    // };
   };
 
-  var DEFAULT_BODY = characterOpts().body_type[0];
-  var DEFAULT_SPECIES = characterOpts().species[0];
-  var DEFAULT_EYE_TYPE = characterOpts().eye_type[0];
-  var DEFAULT_EYE_COLOR = characterOpts().eye_color[0];
-  var DEFAULT_KISSIEPIE = characterOpts().kissiepie[0];
-  var DEFAULT_NOSE_COLOR = characterOpts().nose_color[0];
+  // var DEFAULT_BODY = characterOpts().body_type[0];
+  // var DEFAULT_SPECIES = characterOpts().species[0];
+  // var DEFAULT_EYE_TYPE = characterOpts().eye_type[0];
+  // var DEFAULT_EYE_COLOR = characterOpts().eye_color[0];
+  // var DEFAULT_KISSIEPIE = characterOpts().kissiepie[0];
+  // var DEFAULT_NOSE_COLOR = characterOpts().nose_color[0];
 
   var charInProgress = {
-    body_type: DEFAULT_BODY,
-    species: DEFAULT_SPECIES,
-    eye_type: DEFAULT_EYE_TYPE,
-    eye_color: DEFAULT_EYE_COLOR,
-    kissiepie: DEFAULT_KISSIEPIE,
-    nose_color: DEFAULT_NOSE_COLOR
+    $http.get('/api/v1/characters')
+      .then(function(resp) {
+        charInProgress = set_defaults(resp);
+      })
+    // body_type: DEFAULT_BODY,
+    // species: DEFAULT_SPECIES,
+    // eye_type: DEFAULT_EYE_TYPE,
+    // eye_color: DEFAULT_EYE_COLOR,
+    // kissiepie: DEFAULT_KISSIEPIE,
+    // nose_color: DEFAULT_NOSE_COLOR
   };
 
   service.updateChar = updateChar;

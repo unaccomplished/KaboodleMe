@@ -28,12 +28,12 @@ Trait.create!(
 
 Trait.create!(
     name: 'round',
-    trait_type: 'eye'
+    trait_type: 'eye_type'
 )
 
 Trait.create!(
     name: 'slit',
-    trait_type: 'eye'
+    trait_type: 'eye_type'
 )
 
 Trait.create!(
