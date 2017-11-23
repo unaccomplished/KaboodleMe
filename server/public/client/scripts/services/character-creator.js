@@ -7,6 +7,7 @@ function characterCreator($rootScope, $http) {
       .then(function(resp) {
         return resp.data;
       })
+      // Traits index controller rails
     // return {
     //   body_type: [
     //     {name: 'norm'},
@@ -44,10 +45,10 @@ function characterCreator($rootScope, $http) {
   // var DEFAULT_NOSE_COLOR = characterOpts().nose_color[0];
 
   var charInProgress = {
-    $http.get('/api/v1/characters')
-      .then(function(resp) {
-        charInProgress = set_defaults(resp);
-      })
+    // $http.get('/api/v1/characters')
+    //   .then(function(resp) {
+    //     charInProgress = set_defaults(resp);
+    //   })
     // body_type: DEFAULT_BODY,
     // species: DEFAULT_SPECIES,
     // eye_type: DEFAULT_EYE_TYPE,
@@ -66,7 +67,8 @@ function characterCreator($rootScope, $http) {
     $http.get('/api/v1/characters')
       .then(function(resp) {
         charInProgress = resp.data;
-        // console.log(resp)
+        //resp.data.sources.body_type => .png of the body type
+        console.log(charInProgress)
       })
   }
 
@@ -78,14 +80,15 @@ function characterCreator($rootScope, $http) {
     return current();
   }
 
-  function formatOptionSrc() {
-    charInProgress.body_type.src = 'assets/kitten_parts/bodies/'+charInProgress.body_type.name+'/'+charInProgress.species.name+'.png';
-    charInProgress.eye_type.src = 'assets/kitten_parts/eyes/'+charInProgress.eye_color.name+'/'+charInProgress.body_type.name+'_'+charInProgress.eye_type.name+'.png';
-    charInProgress.kissiepie.src = 'assets/kitten_parts/kissiepie/'+charInProgress.kissiepie.name+'/'+charInProgress.body_type.name+'_'+charInProgress.nose_color.name+'.png';
+  function formatCharProps(char) {
+    console.log(char)
+    char.body_type.src = 'assets/kitten_parts/bodies/'+char.body_type.name+'/'+char.species.name+'.png';
+    char.eye_type.src = 'assets/kitten_parts/eyes/'+char.eye_color.name+'/'+char.body_type.name+'_'+char.eye_type.name+'.png';
+    char.kissiepie.src = 'assets/kitten_parts/kissiepie/'+char.kissiepie.name+'/'+char.body_type.name+'_'+char.nose_color.name+'.png';
+    return char;
   }
 
   function current() {
-    formatOptionSrc();
     return charInProgress;
   }
 
