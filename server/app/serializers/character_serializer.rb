@@ -12,9 +12,9 @@ class CharacterSerializer < ActiveModel::Serializer
     # }
 
     char = Hash.new
-    char["body_type"] = 'foo'#'assets/kitten_parts/bodies/'+newTraits.body_type.name+'/'+char.species.name+'.png';
-    char["eye_type"] = 'foo'#'assets/kitten_parts/eyes/'+char.eye_color.name+'/'+char.body_type.name+'_'+char.eye_type.name+'.png';
-    char["kissiepie"] = 'foo'#'assets/kitten_parts/kissiepie/'+char.kissiepie.name+'/'+char.body_type.name+'_'+char.nose_color.name+'.png';
+    char["body_type"] = 'assets/kitten_parts/bodies/'+newTraits.body_type.name+'/'+newTraits.species.name+'.png';
+    char["eye_type"] = 'assets/kitten_parts/eyes/'+newTraits.eye_color.name+'/'+newTraits.body_type.name+'_'+newTraits.eye_type.name+'.png';
+    char["kissiepie"] = 'assets/kitten_parts/kissiepie/'+newTraits.kissiepie.name+'/'+newTraits.body_type.name+'_'+newTraits.nose_color.name+'.png';
     char
   end
 
