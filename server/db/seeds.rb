@@ -8,12 +8,12 @@
 
 Trait.create!(
     name: 'norm',
-    trait_type: 'body'
+    trait_type: 'body_type'
 )
 
 Trait.create!(
     name: 'slim',
-    trait_type: 'body'
+    trait_type: 'body_type'
 )
 
 Trait.create!(
@@ -73,3 +73,4 @@ Trait.create!(
 
 
 traits = Trait.all
+p "Created #{Trait.count} Traits"
