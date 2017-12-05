@@ -5,10 +5,11 @@ class Character < ActiveRecord::Base
   has_many :character_traits
   has_many :traits, :through => :character_traits
 
-  before_save :set_defaults
+  after_commit :set_defaults
 
   def set_defaults
-    body = Trait.where(trait_type: 'body').first
+    p Trait.all
+    body = Trait.where(trait_type: 'body_type').first
     species = Trait.where(trait_type: 'species').first
     eye_type = Trait.where(trait_type: 'eye_type').first
     eye_color = Trait.where(trait_type: 'eye_color').first

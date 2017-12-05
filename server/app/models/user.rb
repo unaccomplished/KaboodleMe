@@ -9,4 +9,9 @@ class User < ActiveRecord::Base
   has_one :character
   has_many :purchases
   has_many :elite_items, :through => :purchases
+  after_commit :create_character
+
+  def create_character
+    Character.create!(user: self)
+  end
 end

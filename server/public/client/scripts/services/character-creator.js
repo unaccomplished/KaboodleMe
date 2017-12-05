@@ -3,10 +3,13 @@ function characterCreator($rootScope, $http) {
   var charInProgress = {};
 
   var characterOpts = function() {
-    $http.get('/api/v1/characters')
-      .then(function(resp) {
-        return resp.data;
-      })
+    // $http.get('/api/v1/traits')
+    //   .then(function(resp) {
+    //     return resp.data;
+    //   })
+    // should look like the above, follow what we did for Render
+
+
       // Traits index controller rails
     // return {
     //   body_type: [
@@ -64,12 +67,7 @@ function characterCreator($rootScope, $http) {
   initCharacter();
 
   function initCharacter() {
-    $http.get('/api/v1/characters')
-      .then(function(resp) {
-        charInProgress = resp.data;
-        //resp.data.sources.body_type => .png of the body type
-        console.log(charInProgress)
-      })
+    current();
   }
 
   function updateChar(character) {
@@ -89,7 +87,13 @@ function characterCreator($rootScope, $http) {
   }
 
   function current() {
-    return charInProgress;
+    return $http.get('/api/v1/characters')
+      .then(function(resp) {
+        charInProgress = resp.data;
+        //resp.data.sources.body_type => .png of the body type
+        console.log(charInProgress);
+        return charInProgress;
+      })
   }
 
   function fetchOptions() {

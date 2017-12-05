@@ -71,6 +71,14 @@ Trait.create!(
     trait_type: 'nose_color'
 )
 
+User.create!(
+    email: 'evans@kaboodleme.com',
+    password: 'password'
+)
 
 traits = Trait.all
-p "Created #{Trait.count} Traits"
+p "Created #{traits.count} traits"
+users = User.all
+characters = Character.all
+p "Created #{users.count} users"
+p "Created #{characters.count} characters"

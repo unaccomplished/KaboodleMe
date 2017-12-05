@@ -12,11 +12,16 @@
   function renderCtrl(characterCreator, $rootScope) {
     var $ctrl = this;
 
-    $ctrl.character = characterCreator.current();
-
+    fetchCharacter();
     $rootScope.$on('character.update', function() {
-      $ctrl.character = characterCreator.current();
+      fetchCharacter();
     });
+    function fetchCharacter() {
+      characterCreator.current().then(function(data) {
+        $ctrl.character = data;
+        console.log($ctrl.character);
+      })
+    };
   }
 
   angular
