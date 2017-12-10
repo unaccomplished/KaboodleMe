@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       get 'store/sell'
       resources :elite_items
       resources :characters
+      resources :traits
     end
   end
 

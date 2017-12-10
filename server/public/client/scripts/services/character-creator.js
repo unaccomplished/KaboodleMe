@@ -3,6 +3,11 @@ function characterCreator($rootScope, $http) {
   var charInProgress = {};
 
   var characterOpts = function() {
+    $http.get('/api/v1/traits')
+      .then(function(resp) {
+        return resp.data;
+        console.log(resp.data);
+      })
     // $http.get('/api/v1/traits')
     //   .then(function(resp) {
     //     return resp.data;
