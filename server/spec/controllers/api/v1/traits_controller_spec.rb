@@ -14,11 +14,9 @@ RSpec.describe Api::V1::TraitsController, type: :controller do
       resp = JSON.parse(response.body)
       # traits = JSON.parse([trait])
       p resp
-      expect(resp).to eq([{
-        "id"=>trait.id,
-        "name"=>trait.name,
-        "trait_type"=>trait.trait_type
-      }])
+      expect(resp).to eq(
+        trait.name => [{"name"=>trait.name}]
+        )
     end
   end
 
