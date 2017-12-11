@@ -15,7 +15,12 @@ RSpec.describe Api::V1::EliteItemsController, type: :controller do
       p resp
       # binding.pry
       ## not completed, see what resp has
-      expect(resp).to eq([elite_item])
+      expect(resp).to eq([{
+        "id"=>elite_item.id,
+        "name"=>elite_item.name,
+        "price"=>elite_item.price,
+        "src"=>elite_item.src
+      }])
     end
   end
 

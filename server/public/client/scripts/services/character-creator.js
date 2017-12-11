@@ -3,11 +3,11 @@ function characterCreator($rootScope, $http) {
   var charInProgress = {};
 
   var characterOpts = function() {
-    $http.get('/api/v1/traits')
-      .then(function(resp) {
-        return resp.data;
-        console.log(resp.data);
-      })
+    // return $http.get('/api/v1/traits')
+    //   .then(function(resp) {
+    //     return resp.data;
+    //     console.log(resp.data);
+    //   })
     // $http.get('/api/v1/traits')
     //   .then(function(resp) {
     //     return resp.data;
@@ -76,11 +76,16 @@ function characterCreator($rootScope, $http) {
   }
 
   function updateChar(character) {
+    //Charcter controller needs update method
     charInProgress = _.extend(charInProgress, character);
-    $rootScope.$broadcast('character.update');
-    console.log(charInProgress)
-    // $http.post(/api/v1/char acter, charInProgress);
-    return current();
+    return $http.post('/api/v1/character', charInProgress)
+      .then(function(data) {
+        // data should be the entire character just like character GET/show
+        console.log(data)
+        charInProgress = data;
+        $rootScope.$broadcast('character.update');
+        return charInProgress;
+      });
   }
 
   function formatCharProps(char) {
@@ -102,9 +107,11 @@ function characterCreator($rootScope, $http) {
   }
 
   function fetchOptions() {
-    // EVentually this will return this data from the server
-    // via an ajax ($http) request
-    return characterOpts();
+    return $http.get('/api/v1/traits')
+      .then(function(resp) {
+        return resp.data;
+        console.log(resp.data);
+      })
   }
 
   return service;

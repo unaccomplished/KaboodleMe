@@ -12,10 +12,13 @@ RSpec.describe Api::V1::TraitsController, type: :controller do
     it "assigns Trait.all to trait" do
       get :index
       resp = JSON.parse(response.body)
+      # traits = JSON.parse([trait])
       p resp
-      # binding.pry
-      ## not completed, see what resp has
-      expect(resp).to eq([trait])
+      expect(resp).to eq([{
+        "id"=>trait.id,
+        "name"=>trait.name,
+        "trait_type"=>trait.trait_type
+      }])
     end
   end
 
