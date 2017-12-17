@@ -78,7 +78,7 @@ function characterCreator($rootScope, $http) {
   function updateChar(character) {
     //Charcter controller needs update method
     charInProgress = _.extend(charInProgress, character);
-    return $http.post('/api/v1/character', charInProgress)
+    return $http.put('/api/v1/characters', charInProgress)
       .then(function(data) {
         // data should be the entire character just like character GET/show
         console.log(data)
