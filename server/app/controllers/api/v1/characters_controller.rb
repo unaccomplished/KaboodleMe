@@ -15,16 +15,19 @@ class Api::V1::CharactersController < ApplicationController
 
   def update
     character = Character.where(user: current_user).first
-
     # The below line does not work, name is not being updated
-    character.update(character_params) if character_params
+    # character.update(character_params) if character_params
 
-    if params[:character][:trait_id]
-      trait = Trait.find(params[:character][:trait_id])
-      character.traits << trait if trait
+    if params[:traits]
+      params[:traits].each do |t|
+        # Needs refactoring, find a better way
+        trait = Trait.where(trait_type: t[:trait_type], name: t[:name]).first
+        character.traits = [];
+        character.traits << trait if trait
+      end
     end
 
-    if params[:character][:elite_item_id]
+    if params[:elite_items]
       elite_item = EliteItem.find(params[:character][:elite_item_id])
       character.elite_items << elite_item if elite_item
     end
