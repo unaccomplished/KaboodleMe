@@ -22,7 +22,9 @@ class Api::V1::CharactersController < ApplicationController
       params[:traits].each do |t|
         # Needs refactoring, find a better way
         trait = Trait.where(trait_type: t[:trait_type], name: t[:name]).first
-        character.traits = [];
+        # Problem: Every time we run the update funciton we add new traits to the optionsList
+        # which means this list gets linearly larger, doubles every time we update
+        # Best way to update a models list association
         character.traits << trait if trait
       end
     end

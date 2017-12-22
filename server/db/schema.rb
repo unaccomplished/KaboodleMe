@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171015000527) do
+ActiveRecord::Schema.define(version: 20171222160838) do
 
   create_table "character_elite_items", force: :cascade do |t|
     t.integer  "character_id"
@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 20171015000527) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
+
+  add_index "character_traits", ["character_id", "trait_id"], name: "index_character_traits_on_character_id_and_trait_id", unique: true
 
   create_table "characters", force: :cascade do |t|
     t.text     "name"
