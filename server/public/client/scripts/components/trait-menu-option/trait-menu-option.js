@@ -44,7 +44,7 @@
         name: $ctrl.options[$ctrl.currentlyShowingIndex].name
       };
       console.log(trait);
-      characterCreator.updateChar(trait);
+      characterCreator.updateChar([trait]);
     }
 
   }

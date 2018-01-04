@@ -20,19 +20,19 @@ class Api::V1::CharactersController < ApplicationController
 
     if params[:traits]
       params[:traits].each do |t|
-        # Needs refactoring, find a better way
         trait = Trait.where(trait_type: t[:trait_type], name: t[:name]).first
-        # Problem: Every time we run the update funciton we add new traits to the optionsList
-        # which means this list gets linearly larger, doubles every time we update
-        # Best way to update a models list association
-        character.traits << trait if trait
+        # Instead of this:
+        # First find the trait with trait.type that exists on the characters array and remove it
+        # code here to find and remove trait
+        # then add the new trait to the character
+        # character.traits << trait if trait
       end
     end
 
-    if params[:elite_items]
-      elite_item = EliteItem.find(params[:character][:elite_item_id])
-      character.elite_items << elite_item if elite_item
-    end
+    # if params[:elite_items]
+      # elite_item = EliteItem.find(params[:character][:elite_item_id])
+      #character.elite_items << elite_item if elite_item
+    #end
 
     render json: character, serializer: CharacterSerializer
   end

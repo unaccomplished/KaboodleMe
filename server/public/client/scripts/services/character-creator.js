@@ -12,9 +12,9 @@ function characterCreator($rootScope, $http) {
     current();
   }
 
-  function updateChar(trait) {
+  function updateChar(traits) {
     //Charcter controller needs update method
-    return $http.put('/api/v1/characters/'+charInProgress.id, trait)
+    return $http.put('/api/v1/characters/'+charInProgress.id, { traits: traits })
       .then(function(data) {
         // data should be the entire character just like character GET/show
         console.log(data)
