@@ -21,11 +21,7 @@ class Api::V1::CharactersController < ApplicationController
     if params[:traits]
       params[:traits].each do |t|
         trait = Trait.where(trait_type: t[:trait_type], name: t[:name]).first
-        # Instead of this:
-        # First find the trait with trait.type that exists on the characters array and remove it
-        # code here to find and remove trait
-        # then add the new trait to the character
-        # character.traits << trait if trait
+        character.update_trait(trait)
       end
     end
 

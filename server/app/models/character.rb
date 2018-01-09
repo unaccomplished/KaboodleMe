@@ -17,4 +17,12 @@ class Character < ActiveRecord::Base
     nose_color = Trait.where(trait_type: 'nose_color').first
     self.traits.push *[body,species,eye_type,eye_color,kissiepie,nose_color]
   end
+
+  def update_trait(trait)
+    old_trait = self.traits.where(trait_type: trait.trait_type).first
+    if old_trait
+      self.traits.delete(old_trait)
+    end
+    self.traits << trait
+  end
 end
