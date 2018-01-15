@@ -26,9 +26,7 @@
       } else {
         $ctrl.currentlyShowingIndex++;
       }
-      var character = {};
-      character[$ctrl.category] = $ctrl.options[$ctrl.currentlyShowingIndex];
-      characterCreator.updateChar(character);
+      update();
     }
 
     function showPrev() {
@@ -37,10 +35,16 @@
       } else {
         $ctrl.currentlyShowingIndex--;
       }
-      var character = {};
-      character[$ctrl.category] = $ctrl.options[$ctrl.currentlyShowingIndex];
-      console.log(character);
-      characterCreator.updateChar(character);
+      update();
+    }
+
+    function update()    {
+      var trait = {
+        trait_type: $ctrl.category,
+        name: $ctrl.options[$ctrl.currentlyShowingIndex].name
+      };
+      console.log(trait);
+      characterCreator.updateChar([trait]);
     }
 
   }

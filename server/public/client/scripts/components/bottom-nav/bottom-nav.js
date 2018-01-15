@@ -13,7 +13,11 @@
 
   function bottomNavCtrl() {
     var $ctrl = this;
+    $ctrl.toggleStoreModal = toggleStoreModal;
 
+    function toggleStoreModal() {
+      $ctrl.showStoreModal = !$ctrl.showStoreModal;
+    }
   }
 
   angular

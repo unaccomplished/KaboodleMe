@@ -1,10 +1,16 @@
 <div class="bottom-nav">
   <button class="back-button"
           type="button"
-          ui-sref="{{$ctrl.backSref}}">{{$ctrl.backTitle}}</button>
+          ui-sref="{{$ctrl.backSref}}">
+          <span class="background-img"></span>
+          <span class="title">{{$ctrl.backTitle}}</span>
+  </button>
   <button class="store-button"
           type="button"
-          ui-sref="store">STORE</button>
+          ng-click="$ctrl.toggleStoreModal()">
+          <span class="background-img"></span>
+          <span class="title">STORE</span>
+  </button>
   <button class="next-button"
           type="button"
           ng-click="$ctrl.nextOnClick()"
@@ -12,4 +18,7 @@
           <span class="background-img"></span>
           <span class="title">{{$ctrl.nextTitle}}</span>
   </button>
+
+  <store-modal ng-show="$ctrl.showStoreModal"
+               on-toggle="$ctrl.toggleStoreModal()"></store-modal>
 </div>

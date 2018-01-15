@@ -1,0 +1,46 @@
+<div class="store-modal">
+  <store ng-show="$ctrl.isActive('store')"
+         on-show-cart="$ctrl.setAsActive('storeCart')"
+         on-back-button="$ctrl.onToggle()"></store>
+  <store-cart ng-show="$ctrl.isActive('storeCart')"
+              on-back-button="$ctrl.setAsActive('store')"></store-cart>
+
+<div>
+
+  <!-- <div class="store">
+    Store for Elite Items
+
+    <store-options ng-show="$ctrl.isActive('storeOptions')"
+                   on-show-cart="$ctrl.setAsActive('storeOptions')"></store-options>
+    <store-options-secondary ng-show="$ctrl.isActive('storeOptionsSecondary')"
+                   on-show-cart="$ctrl.setAsActive('storeOptionsSecondary')"></store-options-secondary>
+    <store-cart ng-show="$ctrl.isActive('storeCart')"
+                on-exit="$ctrl.setAsActive('storeCart')"></store-cart>
+
+
+    <store-back-button
+      on-click="$ctrl.goBack()"></store-back-button>
+  <div> -->
+
+  <!-- var currentlyActiveView = 'storeOptions';
+
+  function isActive(viewName) {
+    return currentlyActiveView === viewName;
+  }
+
+  function setAsActive(viewName) {
+    currentlyActiveView = viewName;
+  } -->
+
+
+  <!-- <div class="store">
+    Store for Elite Items
+
+    <store-options ng-hide="$ctrl.showCart"
+                   on-show-cart="$ctrl.toggleCart()"></store-options>
+    <store-cart ng-show="$ctrl.showCart"
+                on-exit="$ctrl.toggleCart()"></store-cart>
+
+    <store-back-button
+      on-click="$ctrl.goBack()"></store-back-button>
+  <div> -->

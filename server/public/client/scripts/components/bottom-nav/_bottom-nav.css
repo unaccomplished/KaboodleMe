@@ -6,25 +6,86 @@
 .bottom-nav .store-button {
   height: 100px;
   width: 100px;
-  border-radius: 50%;
-  border: 5px solid red;
-  color: red;
-  font-size: 20px;
-  background-color: white;
+  background: transparent;
+  border: none;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+}
+
+.bottom-nav .store-button span.background-img {
+  font-size: 15px;
+  height: 100%;
+  width: 100%;
+  display: block;
+  background-image: url('../../../../assets/buttons/kk_button_store1.png');
+  background-size: contain;
+  background-position: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bottom-nav .store-button:hover span.background-img {
+  opacity: .5;
+}
+
+.bottom-nav .store-button span.title {
+  font-size: 15px;
+  height: 20px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 41px;
+  left: 0;
 }
 
 .bottom-nav .back-button {
   font-size: 15px;
-  height: 100px;
-  width: 100px;
-  border: 5px solid black;
-  background-color: white;
+  height: 120px;
+  width: 120px;
+  background: transparent;
+  border: none;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+}
+
+.bottom-nav .back-button span.background-img{
+  font-size: 15px;
+  height: 100%;
+  width: 100%;
+  display: block;
+  background-image: url('../../../../assets/buttons/kk_button_navwhite_left.png');
+  background-size: contain;
+  background-position: 0;
+  position: absolute;
+  top: -10px;
+  left: 0;
+}
+
+.bottom-nav .back-button:active span.background-img {
+  background-image: url('../../../../assets/buttons/kk_button_navblue_left.png');
+}
+
+.bottom-nav .back-button:hover span.background-img {
+  opacity: .5;
+}
+
+.bottom-nav .back-button span.title{
+  font-size: 15px;
+  height: 20px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 41px;
+  left: 4px;
 }
 
 .bottom-nav .next-button {
   font-size: 15px;
-  height: 100px;
-  width: 100px;
+  height: 120px;
+  width: 120px;
   background: transparent;
   border: none;
   position: relative;
@@ -41,7 +102,7 @@
   background-size: contain;
   background-position: 0;
   position: absolute;
-  top: 0;
+  top: -10px;
   left: 0;
 }
 

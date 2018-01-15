@@ -9,3 +9,7 @@ class UserSerializer < ActiveModel::Serializer
     object.created_at.strftime('%B $d, $Y')
   end
 end
+
+# def purchases
+#   //logic to add array of purchased flags 
+# end

@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  namespace :api do
+    namespace :v1 do
+      get 'store/buy'
+      get 'store/sell'
+      resources :elite_items
+      resources :characters
+      resources :traits
+    end
+  end
+
   mount_devise_token_auth_for 'User', at: 'api/auth'
 
   namespace :api, defaults: { format: :json } do

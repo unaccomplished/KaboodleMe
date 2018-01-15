@@ -10,7 +10,11 @@
 
     $ctrl.visibleOptions = null;
 
-    $ctrl.allOptions = characterCreator.fetchOptions();
+    characterCreator.fetchOptions()
+      .then(function(data){
+        $ctrl.allOptions = data;
+        console.log($ctrl.allOptions);
+      });
   }
 
   angular

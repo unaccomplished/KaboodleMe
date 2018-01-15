@@ -1,17 +1,16 @@
 (function() {
     function homeCtrl() {
       var $ctrl = this;
+      $ctrl.toggleAuthentication = toggleAuthentication;
 
-      $ctrl.openReg = openReg;
-      $ctrl.toggleLogin = toggleLogin;
-
-      function openReg() {
-        $ctrl.showReg = !$ctrl.showReg;
+      function toggleAuthentication() {
+        $ctrl.showAuthentication = !$ctrl.showAuthentication;
       }
-
-      function toggleLogin() {
-        $ctrl.showLogin =!$ctrl.showLogin;
-      }
+      // $http.post('/api/character') // Createas a chracter
+      //
+      // function onClickCharacterUpdate() {
+      //   $http.put('/api/character', $ctrl.character);
+      // }
     }
 
     angular

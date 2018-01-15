@@ -11,7 +11,54 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170707214809) do
+ActiveRecord::Schema.define(version: 20171222160838) do
+
+  create_table "character_elite_items", force: :cascade do |t|
+    t.integer  "character_id"
+    t.integer  "elite_item_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "character_traits", force: :cascade do |t|
+    t.integer  "character_id"
+    t.integer  "trait_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "character_traits", ["character_id", "trait_id"], name: "index_character_traits_on_character_id_and_trait_id", unique: true
+
+  create_table "characters", force: :cascade do |t|
+    t.text     "name"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "characters", ["user_id"], name: "index_characters_on_user_id"
+
+  create_table "elite_items", force: :cascade do |t|
+    t.string   "name"
+    t.decimal  "price"
+    t.string   "src"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "purchases", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "elite_item_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "traits", force: :cascade do |t|
+    t.string   "name"
+    t.string   "trait_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "provider",               default: "email", null: false

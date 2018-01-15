@@ -2,9 +2,8 @@
   var requestPasswordReset = {
     templateUrl: 'client/scripts/components/request-password-reset/request-password-reset.html',
     bindings: {
-      resolve: '<',
-      close: '&',
-      dismiss: '&'
+      onCancel: '&?',
+      onSubmit: '&?'
     },
     controller: requestPasswordResetCtrl
   }

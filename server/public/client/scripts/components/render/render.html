@@ -1,8 +1,11 @@
 <div class="render">
   <img id="body"
-       ng-src="{{'assets/kitten_parts/bodies/' + $ctrl.character.body_type.src}}" />
+       ng-src="{{$ctrl.character.sources.body_type}}" />
+       <!-- resp.data.sources.body_type -->
   <img id="eyes"
-       ng-src="{{'assets/kitten_parts/eyes/' + $ctrl.character.eye_type.src}}" />
+       ng-src="{{$ctrl.character.sources.eye_type}}" />
+       <!-- resp.data.sources.eye_type -->
   <img id="kissiepie"
-       ng-src="{{'assets/kitten_parts/kissiepie/' + $ctrl.character.kissiepie.src}}" />
+       ng-src="{{$ctrl.character.sources.kissiepie}}" />
+       <!-- resp.data.sources.kissiepie -->
 </div>

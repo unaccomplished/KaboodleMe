@@ -26,17 +26,9 @@
                 url: '/login',
                 component: 'userLogin'
             })
-            .state('request-password', {
-                url: '/requestpassword',
-                component: 'requestPasswordReset'
-            })
             .state('update-password', {
                 url: '/updatepassword',
                 component: 'updatePassword'
-            })
-            .state('store', {
-                url: '/store',
-                component: 'store'
             })
             .state('career', {
                 url: '/career',
