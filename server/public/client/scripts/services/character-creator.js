@@ -1,10 +1,11 @@
 function characterCreator($rootScope, $http) {
   var service = {};
-  var charInProgress = {};
+  var character = {};
 
   service.updateChar = updateChar;
   service.current = current;
   service.fetchOptions = fetchOptions;
+  service.getTraitFromType = getTraitFromType;
 
   initCharacter();
 
@@ -12,25 +13,29 @@ function characterCreator($rootScope, $http) {
     current();
   }
 
+  function getTraitFromType(type) {
+    return _.find(character.traits, function(trait){return trait.trait_type === type});
+  }
+
   function updateChar(traits) {
     //Charcter controller needs update method
-    return $http.put('/api/v1/characters/'+charInProgress.id, { traits: traits })
+    return $http.put('/api/v1/characters/'+character.id, { traits: traits })
       .then(function(data) {
         // data should be the entire character just like character GET/show
         console.log(data)
-        charInProgress = data;
+        character = data;
         $rootScope.$broadcast('character.update');
-        return charInProgress;
+        return character;
       });
   }
 
   function current() {
     return $http.get('/api/v1/characters')
       .then(function(resp) {
-        charInProgress = resp.data;
+        character = resp.data;
         //resp.data.sources.body_type => .png of the body type
-        console.log(charInProgress);
-        return charInProgress;
+        console.log(character);
+        return character;
       })
   }
 

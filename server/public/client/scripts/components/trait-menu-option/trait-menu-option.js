@@ -16,6 +16,23 @@
     $ctrl.isCurrent = isCurrent;
     $ctrl.currentlyShowingIndex = 0;
 
+    init();
+
+    function init() {
+      characterCreator.current()
+        .then(function(character) {
+          var trait = characterCreator.getTraitFromType($ctrl.category);
+          var index = getTraitIndex(trait);
+          $ctrl.currentlyShowingIndex = index;
+        });
+    }
+
+    function getTraitIndex(trait) {
+      return _.findIndex($ctrl.options, function(option) {
+        return option.name === trait.name;
+      });
+    }
+
     function isCurrent(index) {
       return $ctrl.currentlyShowingIndex === index;
     }
