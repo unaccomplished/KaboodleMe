@@ -1,0 +1,19 @@
+/*Character component CSS*/
+.character {
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  color: white;
+  border-radius: 15px;
+  margin: 10px;
+  width: 320px;
+}
+
+.character .options-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}

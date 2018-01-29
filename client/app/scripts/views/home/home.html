@@ -1,0 +1,11 @@
+<div class="home">
+  <h1>KaboodleMe Home Page</h1>
+  <h5>Create your own kitten character in the world of Kittopia, from The Kitten Kaboodle Show</h5>
+
+  <button class="enter-button"
+          type="button"
+          ng-click="$ctrl.toggleAuthentication()">ENTER</button>
+
+  <authentication-modal ng-show="$ctrl.showAuthentication"
+                        on-toggle="$ctrl.toggleAuthentication()"></authentication-modal>
+</div>

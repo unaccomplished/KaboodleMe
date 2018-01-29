@@ -1,0 +1,40 @@
+.store .store-left {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 490px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.store .store-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.store .store-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.store .add-to-cart-button {
+
+}
+
+.store .cart-button {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  border: 5px solid goldenrod;
+  background-color: white;
+}
+
+.store .store-back-button {
+  position: absolute;
+  top: -40px;
+  right: -25px;
+}

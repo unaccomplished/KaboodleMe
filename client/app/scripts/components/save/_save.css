@@ -1,0 +1,52 @@
+.save {
+  background-color: royalblue;
+  /*justify-content: center;*/
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  height: 350px;
+  width: 900px;
+  border-radius: 15px;
+  border: 5px solid white;
+  color: white;
+  font: 18px;
+  padding: 20px;
+  z-index: 20;
+}
+
+.save-options {
+  display: flex;
+  justify-content: space-around;
+}
+
+.export-image {
+  font-size: 12px;
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 200px;
+  margin: 20px 0px;
+}
+
+.export-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: white;
+  border: none;
+  font-weight: bold;
+}
+
+.done-button {
+  width: 60px;
+  height: 25px;
+  border: none;
+  background-color: white;
+  margin-top: 20px;
+}

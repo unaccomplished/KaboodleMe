@@ -1,0 +1,62 @@
+<div class="registration">
+  [CREATE A NEW ACCOUNT]
+  <form role="registration-form">
+    <div class="form-group">
+      <input type="email"
+             name="email"
+             placeholder="EMAIL"
+             ng-model="$ctrl.registrationForm.email"
+             required
+             class="form-control"/>
+    </div>
+
+    <div class="form-group">
+      <input type="password"
+             name="password"
+             placeholder="PASSWORD"
+             ng-model="$ctrl.registrationForm.password"
+             required
+             class="form-control"/>
+    </div>
+
+    <div class="form-group">
+      <input type="password"
+             name="password_confirmation"
+             placeholder="CONFIRM PASSWORD"
+             ng-model="$ctrl.registrationForm.password_confirmation"
+             required
+             class="form-control"/>
+      <span class="error-message">{{ $ctrl.errorMessage }}</span>
+    </div>
+
+    <div class="cancel-submit">
+      <button class="submit-button"
+              ng-click="$ctrl.onCancel()">CANCEL</button>
+
+      <button type="submit"
+              class="submit-button"
+              ng-click="$ctrl.register()">SUBMIT</button>
+    </div>
+
+    <span>OR</span>
+
+    <div class="social-login">
+      <button ng-click="$ctrl.registerSocial('facebook')">
+        [FACEBOOK LOGIN]
+      </button>
+      <button ng-click="$ctrl.registerSocial('google')">
+        [GOOGLE LOGIN]
+      </button>
+      <button ng-click="$ctrl.registerSocial('twitter')">
+        [TWITTER LOGIN]
+      </button>
+    </div>
+  </form>
+
+  <div class="login-account">
+    <label>Have an account?</label>
+    <button class="login-button"
+            type="button"
+            ng-click="$ctrl.onLogin()">Login</button>
+  </div>
+</div>

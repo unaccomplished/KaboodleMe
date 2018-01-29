@@ -1,0 +1,9 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  background-color: lightblue;
+}
+
+.dashboard .character-render {
+  display: flex;
+}

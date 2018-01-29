@@ -1,0 +1,55 @@
+.menu {
+  display: block;
+  flex-direction: column;
+  background-color: lightgreen;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  height: 390px;
+  width: 380px;
+  border-radius: 15px;
+  border: 5px solid white;
+  color: white;
+  font: 18px;
+  z-index: 30;
+}
+
+.menu-inside {
+  margin: 30px;
+}
+
+.main-menu-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.menu-button {
+  background-color: green;
+  color: white;
+  width: 300px;
+  height: 50px;
+  font: 25px arial, sans-serif;
+  margin: 10px 10px 3px;
+  border: none;
+}
+
+.menu .back-button {
+  border: none;
+  background-color: white;
+  width: 80px;
+  height: 20px;
+  margin: 10px;
+}
+
+.menu .menu-nav {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
