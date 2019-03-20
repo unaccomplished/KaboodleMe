@@ -5,7 +5,7 @@ class Character < ActiveRecord::Base
   has_many :character_traits
   has_many :traits, -> { distinct }, through: :character_traits
 
-  after_commit :set_defaults
+  after_create :set_defaults
 
   def set_defaults
     p Trait.all
